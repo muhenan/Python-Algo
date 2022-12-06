@@ -35,6 +35,8 @@ class Solution:
         找到一个最小的之后，ni++ 即可，因为所有的 mi 都已经加过了
         时间复杂度是 klogk
         （存 index 方便遍历）
+        
+        // 也可以用 set 来避免重复，就不用考虑这么多了
         '''
         pq = [(nums1[i] + nums2[0], i, 0) for i in range(min(k, m))]
         while pq and len(ans) < k:
@@ -62,3 +64,8 @@ while q:
 # heapq.heapify(arr2)
 #
 # print(arr2)
+
+q = [4,6,8,10,5,7]
+heapq.heapify(q)
+print(heapq.nlargest(len(q),q))
+print(heapq.nsmallest(len(q), q))
