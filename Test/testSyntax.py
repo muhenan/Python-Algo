@@ -32,3 +32,14 @@ print(all(number in curr_list for curr_list in lists))
 
 # 2
 print(all([number in curr_list for curr_list in lists]))
+
+
+test = 10
+print(test)
+for i in range(5):
+    test += i
+print(test)
+
+max_end = 1000_000
+print(max_end)
+print(max_end < 9998340)
