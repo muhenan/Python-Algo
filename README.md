@@ -1,4 +1,4 @@
 # Python-Algo
-problems using python
+Algo and python data structures
 
 test
