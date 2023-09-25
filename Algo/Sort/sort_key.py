@@ -10,3 +10,6 @@ my_list.sort(key=lambda x: (x[0], -x[1]))
 print(my_list)
 
 # without using extra space
+
+# using list instead of tuple is better
+# because tuple is immutable, the list is, you can change any element you want
