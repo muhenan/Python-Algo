@@ -1,4 +1,9 @@
 # Python-Algo
 Algo and python data structures
 
-test
+todo:
+* hard
+
+
+topic:
+* graph
