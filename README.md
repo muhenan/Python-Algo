@@ -8,6 +8,8 @@ Algo and python data structures
 * [Labuladong](https://labuladong.github.io/algo/home/)
     * Book
 
+* [自己的算法笔记 Notion](https://www.notion.so/Leetcode-46ede8923cff480a8044f1710e9b3f49)
+* 自己 github 里自己的代码 Repo
 ## Todo
 
 总结思维导图，把自己学过的所有算法和数据结构串联起来。
