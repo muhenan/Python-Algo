@@ -9,6 +9,13 @@ Algo and python data structures
     * Book
 
 ## Todo
+
+总结思维导图，把自己学过的所有算法和数据结构串联起来。
+
+不需要做新题，把以前学过的所有东西弄熟。
+
+熟了以后：
+
 * hard
 
 
