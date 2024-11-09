@@ -486,7 +486,7 @@ class Solution:
 
 ## Dynamic Programming
 
-### [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) 同斐波那契
+### [16. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) 同斐波那契
 
 最最简单的 dp，三种方法：
 
@@ -494,7 +494,7 @@ class Solution:
 2. dp 表一维数组
 3. 空间优化，把一维数组变成两个变量
 
-### [Coin Change](https://leetcode.com/problems/coin-change/) 完全背包问题
+### [17. Coin Change](https://leetcode.com/problems/coin-change/) 完全背包问题
 
 必须搞懂！！！！
 
@@ -564,7 +564,7 @@ def coinChange(self, coins: List[int], amount: int) -> int:
         return -1 if dp[-1] == inf else dp[-1]
 ```
 
-### [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+### [18. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 
 第二种方法，考虑让 increasing subsequence 尽量小
 
@@ -597,7 +597,7 @@ class Solution:
         return len(d)
 ```
 
-### [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+### [19. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 
 ```jsx
 def longestCommonSubsequence(self, text1: str, text2: str) -> int:
@@ -613,7 +613,7 @@ def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         return dp[-1][-1]
 ```
 
-### [Word Break Problem](https://leetcode.com/problems/word-break/)
+### [20. Word Break Problem](https://leetcode.com/problems/word-break/)
 
 其实这个感觉类似于前缀和了
 
@@ -658,7 +658,7 @@ def wordBreak(self, s: str, wordDict: List[str]) -> bool:
 
 递归嘛，把任务交给下一个函数，这个函数只检测当前的很小的一小段字符串在不在
 
-### [Combination Sum](https://leetcode.com/problems/combination-sum-iv/)
+### [21. Combination Sum](https://leetcode.com/problems/combination-sum-iv/)
 
 最暴力的 DFS，便利所有可能情况，直接超时
 
@@ -727,7 +727,7 @@ class Solution:
         return ans[-1]
 ```
 
-### [House Robber](https://leetcode.com/problems/house-robber/)
+### [22. House Robber](https://leetcode.com/problems/house-robber/)
 
 ```jsx
 # 经典 dp 题目
@@ -784,7 +784,7 @@ class Solution:
         return result
 ```
 
-### [House Robber II](https://leetcode.com/problems/house-robber-ii/)
+### [23. House Robber II](https://leetcode.com/problems/house-robber-ii/)
 
 直接就是用的自底向上的方法，用了一个一维数组，这里懒得优化成变量了
 
@@ -807,7 +807,7 @@ class Solution:
         return max(noFirst[-1], withFirst[-2])
 ```
 
-### [Decode Ways](https://leetcode.com/problems/decode-ways/)
+### [24. Decode Ways](https://leetcode.com/problems/decode-ways/)
 
 同样的思路，前缀和，影响下一个，DP
 
@@ -837,7 +837,7 @@ class Solution:
         return ans[-1]
 ```
 
-### [Unique Paths](https://leetcode.com/problems/unique-paths/)
+### [25. Unique Paths](https://leetcode.com/problems/unique-paths/)
 
 数学方法，这里就不说了，直接返回，C(m, m + n)
 
@@ -874,7 +874,7 @@ class Solution:
         return cur[-1]
 ```
 
-### [Jump Game](https://leetcode.com/problems/jump-game/)
+### [26. Jump Game](https://leetcode.com/problems/jump-game/)
 
 感觉太简单了，又有点不太像 DP，好像就是**不断的更新这个最多能到的位置**，如果中途有个地方走不下去了，就返回 False，如果是都走过去了，最后返回 True
 
@@ -892,7 +892,7 @@ def canJump(self, nums: List[int]) -> bool:
 
 ## Graph
 
-### [Clone Graph](https://leetcode.com/problems/clone-graph/)
+### [27. Clone Graph](https://leetcode.com/problems/clone-graph/)
 
 传统 DFS 解决问题，用一个字典，记录了对应的新老 node
 
@@ -920,7 +920,7 @@ class Solution:
         return dfs(node)
 ```
 
-### [Course Schedule](https://leetcode.com/problems/course-schedule/)
+### [28. Course Schedule](https://leetcode.com/problems/course-schedule/)
 
 首先图不一定是连通图
 
@@ -964,7 +964,7 @@ def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         return self.result
 ```
 
-### [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
+### [29. Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
 
 经典 DFS
 
@@ -1000,7 +1000,7 @@ class Solution:
         return ans
 ```
 
-### [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+### [30. Number of Islands](https://leetcode.com/problems/number-of-islands/)
 
 自解方法问题也不大，直接从每个点都开始 dfs ，标记所有岛
 
@@ -1025,7 +1025,7 @@ class Solution:
         return ans
 ```
 
-- [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+### [31. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
 1. 最直接的，排序
 2. 哈希表记录，然后从每个点开始搜索
@@ -1098,15 +1098,20 @@ class Solution {
 }
 ```
 
-- [Alien Dictionary (Leetcode Premium)](https://leetcode.com/problems/alien-dictionary/)
-- [Graph Valid Tree (Leetcode Premium)](https://leetcode.com/problems/graph-valid-tree/)
-- [Number of Connected Components in an Undirected Graph (Leetcode Premium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
+### 32. Alien Dictionary (Leetcode Premium)
+[link](https://leetcode.com/problems/alien-dictionary/)
+
+### 33. Graph Valid Tree (Leetcode Premium)
+[link](https://leetcode.com/problems/graph-valid-tree/)
+
+### 34. Number of Connected Components in an Undirected Graph (Leetcode Premium)
+[link](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
 
 ---
 
 ## Interval
 
-### [Insert Interval](https://leetcode.com/problems/insert-interval/)
+### [35. Insert Interval](https://leetcode.com/problems/insert-interval/)
 
 ```python
 class Solution:
@@ -1135,7 +1140,7 @@ class Solution:
         return ans
 ```
 
-### [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+### [36. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 
 ```python
 class Solution:
@@ -1176,7 +1181,7 @@ intervals.sort(key=lambda x: x[0])
 .sort(arr , key = lambda x : …)
 ```
 
-### [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+### [37. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
 
 直接 intervals.sort(key = lambda x:x[0])
 
@@ -1197,7 +1202,7 @@ class Solution:
         return ans
 ```
 
-### 436 寻找右区间
+#### 436 寻找右区间
 
 可以直接暴力 n2 做
 
@@ -1233,11 +1238,11 @@ class Solution:
         return ans
 ```
 
-- [Meeting Rooms (Leetcode Premium)](https://leetcode.com/problems/meeting-rooms/)
+### [38. Meeting Rooms (Leetcode Premium)](https://leetcode.com/problems/meeting-rooms/)
 
-- [Meeting Rooms II (Leetcode Premium)](https://leetcode.com/problems/meeting-rooms-ii/)
+### [39. Meeting Rooms II (Leetcode Premium)](https://leetcode.com/problems/meeting-rooms-ii/)
 
-### meeting rooms 3
+#### meeting rooms 3
 
 莫名的bug，用 10000000这种最大值不行，在 python中，最大值一定要使用
 
@@ -1336,7 +1341,7 @@ def mostBooked(self, n: int, meetings: List[List[int]]) -> int:
         return ans
 ```
 
-### 扫描线算法
+#### 扫描线算法
 
 1353
 
