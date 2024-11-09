@@ -1388,7 +1388,7 @@ class Solution:
 
 ## Linked List 但凡链表题，必须有 dummy
 
-### [Reverse a Linked List](https://leetcode.com/problems/reverse-linked-list/)
+### [40. Reverse a Linked List](https://leetcode.com/problems/reverse-linked-list/)
 
 ```python
 # Definition for singly-linked list.
@@ -1433,7 +1433,7 @@ class Solution:
         return pre
 ```
 
-### [Detect Cycle in a Linked List](https://leetcode.com/problems/linked-list-cycle/)
+### [41. Detect Cycle in a Linked List](https://leetcode.com/problems/linked-list-cycle/)
 
 ```python
 """
@@ -1459,7 +1459,7 @@ class Solution:
         return False
 ```
 
-### [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+### [42. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 use old nodes
 
@@ -1488,7 +1488,7 @@ class Solution:
 # 也有递归的写法，但要用比较多额外的空间，很简单，这里暂且不写了 like f(x) = 1 + f(x - 1)
 ```
 
-### [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+### [43. Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 
 ```python
 from typing import List, Optional
@@ -1604,7 +1604,7 @@ class Solution:
         return dummy.next
 ```
 
-### [Remove Nth Node From End Of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+### [44. Remove Nth Node From End Of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 
 ```python
 """
@@ -1636,7 +1636,7 @@ class Solution:
         return dummy.next
 ```
 
-### [Reorder List](https://leetcode.com/problems/reorder-list/)
+### [45. Reorder List](https://leetcode.com/problems/reorder-list/)
 
 ```python
 # Definition for singly-linked list.
@@ -1758,17 +1758,17 @@ class Solution:
 
 ## Matrix
 
-### [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+### [46. Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
 
-- [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
-- [Rotate Image](https://leetcode.com/problems/rotate-image/)
-- [Word Search](https://leetcode.com/problems/word-search/)
+### [47. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
+### [48. Rotate Image](https://leetcode.com/problems/rotate-image/)
+### [49. Word Search](https://leetcode.com/problems/word-search/)
 
 ---
 
 ## String
 
-### [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+### [50. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 滑动窗口的题目，还需要重点学习
 
@@ -1829,7 +1829,7 @@ class Solution:
         return answer
 ```
 
-### [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+### [51. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
 
 所有子字符串相关的，特别是连续的子字符串，都去想滑动窗口！！！！
 
@@ -1864,9 +1864,9 @@ class Solution:
         return answer
 ```
 
-- [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+### [52. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
-### [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+### [53. Valid Anagram](https://leetcode.com/problems/valid-anagram/)
 
 ```python
 class Solution:
@@ -1889,7 +1889,7 @@ class Solution:
         # return s == t
 ```
 
-### [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+### [54. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 
 ```python
 class Solution:
@@ -1903,7 +1903,7 @@ class Solution:
         return list(my_dict.values())
 ```
 
-### [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+### [55. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 
 基本的就是 stack 的做法
 
@@ -1937,7 +1937,7 @@ class Solution:
         return len(my_stack) == 0
 ```
 
-### [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+### [56. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
 
 ```jsx
 class Solution:
@@ -1957,15 +1957,17 @@ class Solution:
         return True
 ```
 
-- [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
-- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
-- [Encode and Decode Strings (Leetcode Premium)](https://leetcode.com/problems/encode-and-decode-strings/)
+### [57. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
+
+### [58. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
+
+### [59. Encode and Decode Strings (Leetcode Premium)](https://leetcode.com/problems/encode-and-decode-strings/)
 
 ---
 
 ## Tree
 
-### [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+### [60. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
 ```jsx
 class TreeNode:
@@ -1987,7 +1989,7 @@ class Solution:
         return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 ```
 
-### [Same Tree](https://leetcode.com/problems/same-tree/)
+### [61. Same Tree](https://leetcode.com/problems/same-tree/)
 
 也是 DFS 和 BFS 的做法
 
@@ -2041,7 +2043,7 @@ class Solution:
 // ^ 就是抑或的意思
 ```
 
-### [Invert/Flip Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+### [62. Invert/Flip Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
 
 无脑递归
 
@@ -2083,7 +2085,7 @@ class Solution(object):
 		return root
 ```
 
-### [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+### [63. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 
 思路就是：
 
@@ -2105,7 +2107,7 @@ def maxPathSum(self, root: Optional[TreeNode]) -> int:
         return self.maxsum
 ```
 
-### [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+### [64. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 
 层次遍历，就是 BFS，
 
@@ -2132,7 +2134,7 @@ def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         return ans
 ```
 
-### [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+### [65. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 
 输入是字符串，基本无敌
 
@@ -2311,7 +2313,7 @@ class Codec:
         return dfs(dataList)
 ```
 
-### [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
+### [66. Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
 
 暴力 DFS
 
@@ -2329,9 +2331,9 @@ class Solution:
         return isSubtreeStartFromRoot(root, subRoot) or self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)
 ```
 
-- [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+### [67. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 
-### [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+### [68. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
 
 暴力 DFS
 
@@ -2391,9 +2393,9 @@ class Solution:
         return dfs(root)[1] != inf
 ```
 
-- [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+### [69. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
 
-### [Lowest Common Ancestor of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+### [70. Lowest Common Ancestor of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 
 ```python
 class Solution:
@@ -2416,20 +2418,21 @@ class Solution:
         return ans
 ```
 
-- [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+### [71. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
 
-- [Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
-- [Word Search II](https://leetcode.com/problems/word-search-ii/)
+### [72. Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
+
+### [73. Word Search II](https://leetcode.com/problems/word-search-ii/)
 
 ---
 
 ## Heap (and Sort)
 
-- [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+#### merge k sorted lists -> 43
 
-- [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+### [74. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 
-- [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+### [75. Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
 ---
 
@@ -2437,9 +2440,3 @@ class Solution:
 
 [14 Patterns to Ace Any Coding Interview Question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
 
----
-
-两个DFS，搜单词
-
-* [211 Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
-* [212 Word Search II](https://leetcode.com/problems/word-search-ii/)
