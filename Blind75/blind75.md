@@ -1,8 +1,12 @@
 # Blind 75
 
+[toc]
+
+
+
 ## Array
 
-### [Two Sum](https://leetcode.com/problems/two-sum/)
+### [1. Two Sum](https://leetcode.com/problems/two-sum/)
 
 ```python
 class Solution(object):
@@ -86,7 +90,7 @@ class Solution {
 }
 ```
 
-### [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+### [2. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
 ```python
 class Solution {
@@ -126,7 +130,7 @@ class Solution {
 }
 ```
 
-### [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+### [3. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 
 ```python
 class Solution(object):
@@ -166,7 +170,7 @@ class Solution(object):
         return len(set(nums)) < len(nums)
 ```
 
-### [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+### [4. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 
 ```python
 class Solution {
@@ -247,7 +251,7 @@ public int[] productExceptSelf(int[] nums) {
 }
 ```
 
-### [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+### [5. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
 ```python
 /**
@@ -309,7 +313,7 @@ class Solution {
 }
 ```
 
-### [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+### [6. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 
 ```python
 class Solution:
@@ -344,7 +348,7 @@ class Solution:
         return result
 ```
 
-### [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+### [7. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 
 ```python
 """
@@ -399,7 +403,7 @@ class Solution:
 
 具体见 leetcode 篇中的二分查找
 
-### [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+### [8. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 
 ```python
 class Solution:
@@ -432,9 +436,9 @@ class Solution:
         return -1
 ```
 
-### [3 Sum](https://leetcode.com/problems/3sum/)
+### [9. Three Sum](https://leetcode.com/problems/3sum/)
 
-### [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
+### [10. Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
 ```python
 class Solution:
@@ -463,11 +467,20 @@ class Solution:
 
 ## Binary
 
-- [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
-- [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
-- [Counting Bits](https://leetcode.com/problems/counting-bits/)
-- [Missing Number](https://leetcode.com/problems/missing-number/)
-- [Reverse Bits](https://leetcode.com/problems/reverse-bits/)
+### 11. Sum of Two Integers
+[link](https://leetcode.com/problems/sum-of-two-integers/)
+
+### 12. Number of 1 Bits
+[link](https://leetcode.com/problems/number-of-1-bits/)
+
+### 13. Counting Bits
+[link](https://leetcode.com/problems/counting-bits/)
+
+### 14. Missing Number
+[link](https://leetcode.com/problems/missing-number/)
+
+### 15. Reverse Bits
+[link](https://leetcode.com/problems/reverse-bits/)
 
 ---
 
