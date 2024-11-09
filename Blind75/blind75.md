@@ -1,7 +1,6 @@
 # Blind 75
 
-
-## **Array**
+## Array
 
 ### 1. [Two Sum](https://leetcode.com/problems/two-sum/)
 
@@ -87,7 +86,7 @@ class Solution {
 }
 ```
 
-### ✅ [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+### [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
 ```python
 class Solution {
@@ -127,7 +126,7 @@ class Solution {
 }
 ```
 
-### ✅ [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+### [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 
 ```python
 class Solution(object):
@@ -167,7 +166,7 @@ class Solution(object):
         return len(set(nums)) < len(nums)
 ```
 
-### ✅ [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+### [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 
 ```python
 class Solution {
@@ -248,7 +247,7 @@ public int[] productExceptSelf(int[] nums) {
 }
 ```
 
-### ✅ [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+### [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
 ```python
 /**
@@ -310,7 +309,7 @@ class Solution {
 }
 ```
 
-### ✅ [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+### [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 
 ```python
 class Solution:
@@ -345,7 +344,7 @@ class Solution:
         return result
 ```
 
-### ✅ [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+### [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 
 ```python
 """
@@ -400,7 +399,7 @@ class Solution:
 
 具体见 leetcode 篇中的二分查找
 
-### ✅ [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+### [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 
 ```python
 class Solution:
@@ -433,9 +432,9 @@ class Solution:
         return -1
 ```
 
-### ❌ [3 Sum](https://leetcode.com/problems/3sum/)
+### [3 Sum](https://leetcode.com/problems/3sum/)
 
-### ✅ [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
+### [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
 ```python
 class Solution:
@@ -462,7 +461,7 @@ class Solution:
 
 ---
 
-## **Binary**
+## Binary
 
 - [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
 - [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
@@ -472,9 +471,9 @@ class Solution:
 
 ---
 
-## **Dynamic Programming**
+## Dynamic Programming
 
-### ✅ [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) 同斐波那契
+### [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) 同斐波那契
 
 最最简单的 dp，三种方法：
 
@@ -482,7 +481,7 @@ class Solution:
 2. dp 表一维数组
 3. 空间优化，把一维数组变成两个变量
 
-### ✅ [Coin Change](https://leetcode.com/problems/coin-change/) 完全背包问题
+### [Coin Change](https://leetcode.com/problems/coin-change/) 完全背包问题
 
 必须搞懂！！！！
 
@@ -552,7 +551,7 @@ def coinChange(self, coins: List[int], amount: int) -> int:
         return -1 if dp[-1] == inf else dp[-1]
 ```
 
-### ✅[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+### [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 
 第二种方法，考虑让 increasing subsequence 尽量小
 
@@ -585,7 +584,7 @@ class Solution:
         return len(d)
 ```
 
-### ✅ [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+### [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 
 ```jsx
 def longestCommonSubsequence(self, text1: str, text2: str) -> int:
@@ -601,7 +600,7 @@ def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         return dp[-1][-1]
 ```
 
-### ✅ [Word Break Problem](https://leetcode.com/problems/word-break/)
+### [Word Break Problem](https://leetcode.com/problems/word-break/)
 
 其实这个感觉类似于前缀和了
 
@@ -646,7 +645,7 @@ def wordBreak(self, s: str, wordDict: List[str]) -> bool:
 
 递归嘛，把任务交给下一个函数，这个函数只检测当前的很小的一小段字符串在不在
 
-### ✅ [Combination Sum](https://leetcode.com/problems/combination-sum-iv/)
+### [Combination Sum](https://leetcode.com/problems/combination-sum-iv/)
 
 最暴力的 DFS，便利所有可能情况，直接超时
 
@@ -715,7 +714,7 @@ class Solution:
         return ans[-1]
 ```
 
-### ✅ [House Robber](https://leetcode.com/problems/house-robber/)
+### [House Robber](https://leetcode.com/problems/house-robber/)
 
 ```jsx
 # 经典 dp 题目
@@ -772,7 +771,7 @@ class Solution:
         return result
 ```
 
-### ✅ [House Robber II](https://leetcode.com/problems/house-robber-ii/)
+### [House Robber II](https://leetcode.com/problems/house-robber-ii/)
 
 直接就是用的自底向上的方法，用了一个一维数组，这里懒得优化成变量了
 
@@ -795,7 +794,7 @@ class Solution:
         return max(noFirst[-1], withFirst[-2])
 ```
 
-### ✅ [Decode Ways](https://leetcode.com/problems/decode-ways/)
+### [Decode Ways](https://leetcode.com/problems/decode-ways/)
 
 同样的思路，前缀和，影响下一个，DP
 
@@ -825,7 +824,7 @@ class Solution:
         return ans[-1]
 ```
 
-### ✅ [Unique Paths](https://leetcode.com/problems/unique-paths/)
+### [Unique Paths](https://leetcode.com/problems/unique-paths/)
 
 数学方法，这里就不说了，直接返回，C(m, m + n)
 
@@ -862,7 +861,7 @@ class Solution:
         return cur[-1]
 ```
 
-### ✅ [Jump Game](https://leetcode.com/problems/jump-game/)
+### [Jump Game](https://leetcode.com/problems/jump-game/)
 
 感觉太简单了，又有点不太像 DP，好像就是**不断的更新这个最多能到的位置**，如果中途有个地方走不下去了，就返回 False，如果是都走过去了，最后返回 True
 
@@ -878,9 +877,9 @@ def canJump(self, nums: List[int]) -> bool:
 
 ---
 
-## **Graph**
+## Graph
 
-### ✅ [Clone Graph](https://leetcode.com/problems/clone-graph/)
+### [Clone Graph](https://leetcode.com/problems/clone-graph/)
 
 传统 DFS 解决问题，用一个字典，记录了对应的新老 node
 
@@ -908,7 +907,7 @@ class Solution:
         return dfs(node)
 ```
 
-### ✅ [Course Schedule](https://leetcode.com/problems/course-schedule/)
+### [Course Schedule](https://leetcode.com/problems/course-schedule/)
 
 首先图不一定是连通图
 
@@ -952,7 +951,7 @@ def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         return self.result
 ```
 
-### ✅ [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
+### [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
 
 经典 DFS
 
@@ -988,7 +987,7 @@ class Solution:
         return ans
 ```
 
-### ✅ [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+### [Number of Islands](https://leetcode.com/problems/number-of-islands/)
 
 自解方法问题也不大，直接从每个点都开始 dfs ，标记所有岛
 
@@ -1092,9 +1091,9 @@ class Solution {
 
 ---
 
-## **Interval**
+## Interval
 
-### ✅ [Insert Interval](https://leetcode.com/problems/insert-interval/)
+### [Insert Interval](https://leetcode.com/problems/insert-interval/)
 
 ```python
 class Solution:
@@ -1123,7 +1122,7 @@ class Solution:
         return ans
 ```
 
-### ✅ [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+### [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 
 ```python
 class Solution:
@@ -1164,7 +1163,7 @@ intervals.sort(key=lambda x: x[0])
 .sort(arr , key = lambda x : …)
 ```
 
-### ✅ [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+### [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
 
 直接 intervals.sort(key = lambda x:x[0])
 
@@ -1185,7 +1184,7 @@ class Solution:
         return ans
 ```
 
-### ✅ 436 寻找右区间
+### 436 寻找右区间
 
 可以直接暴力 n2 做
 
@@ -1225,7 +1224,7 @@ class Solution:
 
 - [Meeting Rooms II (Leetcode Premium)](https://leetcode.com/problems/meeting-rooms-ii/)
 
-### ✅ meeting rooms 3
+### meeting rooms 3
 
 莫名的bug，用 10000000这种最大值不行，在 python中，最大值一定要使用
 
@@ -1369,9 +1368,9 @@ class Solution:
 
 ---
 
-## **Linked List 但凡链表题，必须有 dummy**
+## Linked List 但凡链表题，必须有 dummy
 
-### ✅ [Reverse a Linked List](https://leetcode.com/problems/reverse-linked-list/)
+### [Reverse a Linked List](https://leetcode.com/problems/reverse-linked-list/)
 
 ```python
 # Definition for singly-linked list.
@@ -1416,7 +1415,7 @@ class Solution:
         return pre
 ```
 
-### ✅ [Detect Cycle in a Linked List](https://leetcode.com/problems/linked-list-cycle/)
+### [Detect Cycle in a Linked List](https://leetcode.com/problems/linked-list-cycle/)
 
 ```python
 """
@@ -1442,7 +1441,7 @@ class Solution:
         return False
 ```
 
-### ✅ [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+### [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 use old nodes
 
@@ -1471,7 +1470,7 @@ class Solution:
 # 也有递归的写法，但要用比较多额外的空间，很简单，这里暂且不写了 like f(x) = 1 + f(x - 1)
 ```
 
-### ✅ [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+### [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 
 ```python
 from typing import List, Optional
@@ -1587,7 +1586,7 @@ class Solution:
         return dummy.next
 ```
 
-### ✅ [Remove Nth Node From End Of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+### [Remove Nth Node From End Of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 
 ```python
 """
@@ -1619,7 +1618,7 @@ class Solution:
         return dummy.next
 ```
 
-### ✅ [Reorder List](https://leetcode.com/problems/reorder-list/)
+### [Reorder List](https://leetcode.com/problems/reorder-list/)
 
 ```python
 # Definition for singly-linked list.
@@ -1739,9 +1738,9 @@ class Solution:
 
 ---
 
-## **Matrix**
+## Matrix
 
-### ✅ [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+### [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
 
 - [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
 - [Rotate Image](https://leetcode.com/problems/rotate-image/)
@@ -1749,9 +1748,9 @@ class Solution:
 
 ---
 
-## **String**
+## String
 
-### ✅ [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+### [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 滑动窗口的题目，还需要重点学习
 
@@ -1812,7 +1811,7 @@ class Solution:
         return answer
 ```
 
-### ✅ [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+### [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
 
 所有子字符串相关的，特别是连续的子字符串，都去想滑动窗口！！！！
 
@@ -1849,7 +1848,7 @@ class Solution:
 
 - [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
-### ✅ [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+### [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
 
 ```python
 class Solution:
@@ -1872,7 +1871,7 @@ class Solution:
         # return s == t
 ```
 
-### ✅ [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+### [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 
 ```python
 class Solution:
@@ -1886,7 +1885,7 @@ class Solution:
         return list(my_dict.values())
 ```
 
-### ✅ [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+### [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 
 基本的就是 stack 的做法
 
@@ -1920,7 +1919,7 @@ class Solution:
         return len(my_stack) == 0
 ```
 
-### ✅ [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+### [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
 
 ```jsx
 class Solution:
@@ -1946,9 +1945,9 @@ class Solution:
 
 ---
 
-## **Tree**
+## Tree
 
-### ✅ [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+### [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
 ```jsx
 class TreeNode:
@@ -1970,7 +1969,7 @@ class Solution:
         return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 ```
 
-### ✅ [Same Tree](https://leetcode.com/problems/same-tree/)
+### [Same Tree](https://leetcode.com/problems/same-tree/)
 
 也是 DFS 和 BFS 的做法
 
@@ -2024,7 +2023,7 @@ class Solution:
 // ^ 就是抑或的意思
 ```
 
-### ✅ [Invert/Flip Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+### [Invert/Flip Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
 
 无脑递归
 
@@ -2066,7 +2065,7 @@ class Solution(object):
 		return root
 ```
 
-### ✅ [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+### [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 
 思路就是：
 
@@ -2088,7 +2087,7 @@ def maxPathSum(self, root: Optional[TreeNode]) -> int:
         return self.maxsum
 ```
 
-### ✅ [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+### [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 
 层次遍历，就是 BFS，
 
@@ -2115,7 +2114,7 @@ def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         return ans
 ```
 
-### ✅ [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+### [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 
 输入是字符串，基本无敌
 
@@ -2294,7 +2293,7 @@ class Codec:
         return dfs(dataList)
 ```
 
-### ✅ [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
+### [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
 
 暴力 DFS
 
@@ -2314,7 +2313,7 @@ class Solution:
 
 - [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 
-### ✅ [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+### [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
 
 暴力 DFS
 
@@ -2376,7 +2375,7 @@ class Solution:
 
 - [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
 
-### ✅ [Lowest Common Ancestor of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+### [Lowest Common Ancestor of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 
 ```python
 class Solution:
@@ -2406,7 +2405,7 @@ class Solution:
 
 ---
 
-## **Heap (and Sort)**
+## Heap (and Sort)
 
 - [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 
@@ -2416,7 +2415,7 @@ class Solution:
 
 ---
 
-## **Important Link:**
+## Important Link:
 
 [14 Patterns to Ace Any Coding Interview Question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
 
@@ -2424,5 +2423,5 @@ class Solution:
 
 两个DFS，搜单词
 
-- [ ] [211 Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
-- [ ] [212 Word Search II](https://leetcode.com/problems/word-search-ii/)
+* [211 Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
+* [212 Word Search II](https://leetcode.com/problems/word-search-ii/)
