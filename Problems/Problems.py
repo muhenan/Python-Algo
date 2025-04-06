@@ -3,53 +3,6 @@ import math
 from typing import List
 import copy
 
-class Solution49:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        my_map = collections.defaultdict(list)
-        for str in strs:
-            key = "".join(sorted(str))
-            my_map[key].append(str)
-        return list(my_map.values())
-    def groupAnagrams1(self, strs: List[str]) -> List[List[str]]:
-        my_map = collections.defaultdict(list)
-        for str in strs:
-            #counts = [0 for _ in range(26)]
-            counts = [0] * 26
-            for c in str:
-                counts[ord(c) - ord("a")] += 1
-            my_map[tuple(counts)].append(str)
-        return list(my_map.values())
-
-class Solution55:
-    def canJump(self, nums: List[int]) -> bool:
-        length = len(nums)
-        if (length == 1): return True
-        closestOne = length - 1
-        for i in reversed(range(length - 1)):
-            if nums[i] + i >= closestOne:
-                closestOne = i
-        return True if closestOne == 0 else False
-    def canJump1(self, nums) :
-        max_i = 0       #初始化当前能到达最远的位置
-        for i, jump in enumerate(nums):   #i为当前位置，jump是当前位置的跳数
-            if max_i>=i and i+jump>max_i:  #如果当前位置能到达，并且当前位置+跳数>最远位置
-                max_i = i+jump  #更新最远能到达位置
-        return max_i>=i
-
-class Solution96:
-    def numTrees(self, n: int) -> int:
-        dp = [1, 1] + [0] * (n - 1)
-        for i in range(2, n+1):
-            for j in range(1, i+1):
-                dp[i] += dp[j - 1] * dp[i - j]
-        return dp[n]
-    def numTrees1(self, n: int) -> int:
-        dp=[1]+[0]*n
-        for i in range(1,n+1):
-            for j in range(i):
-                dp[i]+=dp[j]*dp[i-j-1]
-        return dp[n]
-
 # 155
 class MinStack:
 

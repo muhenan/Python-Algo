@@ -66,3 +66,44 @@ class DistinctAveragesFinder:
             averages.add(avg)
             
         return len(averages)
+
+class GroupAnagrams:
+    """
+    LeetCode 49: Group Anagrams
+    
+    Problem Description:
+    给定一个字符串数组，将所有字母异位词组合在一起。
+    字母异位词指字母相同，但排列不同的字符串。
+    
+    Example:
+    Input: ["eat","tea","tan","ate","nat","bat"]
+    Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+    """
+    def groupAnagrams_sort(self, strs: List[str]) -> List[List[str]]:
+        """
+        方法一：排序法
+        Time: O(nklogk), n是字符串数量，k是最长字符串长度
+        Space: O(nk)
+        """
+        my_map = collections.defaultdict(list)
+        for s in strs:
+            # 将排序后的字符串作为key
+            key = "".join(sorted(s))
+            my_map[key].append(s)
+        return list(my_map.values())
+    
+    def groupAnagrams_count(self, strs: List[str]) -> List[List[str]]:
+        """
+        方法二：计数法
+        Time: O(nk), n是字符串数量，k是最长字符串长度
+        Space: O(nk)
+        """
+        my_map = collections.defaultdict(list)
+        for s in strs:
+            # 统计每个字符出现的次数
+            counts = [0] * 26
+            for c in s:
+                counts[ord(c) - ord("a")] += 1
+            # 使用计数元组作为key
+            my_map[tuple(counts)].append(s)
+        return list(my_map.values())
