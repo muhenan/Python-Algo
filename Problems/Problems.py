@@ -3,32 +3,6 @@ import math
 from typing import List
 import copy
 
-class Solution739:
-    # n^2 ...
-    def dailyTemperatures(self, temperatures: List[int]) -> List[int]: # Monotonic stack
-        length = len(temperatures)
-        res = [0] * length
-        my_queue = []
-        for i in range(length):
-            while my_queue and temperatures[i] > temperatures[my_queue[-1]]:
-                pre_index = my_queue.pop()
-                res[pre_index] = i - pre_index
-            my_queue.append(i)
-        return res
-    # Time limited
-    # def dailyTemperatures2(self, temperatures: List[int]) -> List[int]:
-    #     length = len(temperatures)
-    #     res = [0] * length
-    #     for i in range(length):
-    #         right = i
-    #         for j in range(i + 1, length):
-    #             if temperatures[j] > temperatures[i]:
-    #                 right = j
-    #                 break
-    #         res[i] = right - i
-    #     return res
-
-for i in range(8,2,-1): print(i)
 
 class Solution448:
     # use a 额外数组 which is a bit map
