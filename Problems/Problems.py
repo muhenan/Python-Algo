@@ -3,44 +3,6 @@ import math
 from typing import List
 import copy
 
-
-class Solution6:
-    def convert(self, s: str, numRows: int) -> str:
-        if numRows < 2: return s
-        res = ["" for _ in range(numRows)]
-        i, flag = 0, -1
-        for c in s:
-            res[i] += c
-            if i == 0 or i == numRows - 1: flag = -flag
-            i += flag
-        return "".join(res)
-
-
-class Solution914(object):
-    def hasGroupsSizeX(self, deck):
-        count = collections.Counter(deck)
-        N = len(deck)
-        for X in range(2, N+1):
-            if N % X == 0:
-                if all(v % X == 0 for v in count.values()):
-                    return True
-        return False
-
-for x in range(2, 6):
-    print(x)
-
-arr = [1,1,1,2,2,3,3]
-count = collections.Counter(arr)
-for k, v in count.items():
-    print(k, v)
-
-solu914 = Solution914()
-print(solu914.hasGroupsSizeX([1,1,1,2,2]))
-
-for value in arr:
-    print(value)
-
-
 class Solution2465:
     def distinctAverages(self, nums: List[int]) -> int:
         nums.sort()
@@ -84,12 +46,6 @@ class Solution49:
             my_map[tuple(counts)].append(str)
         return list(my_map.values())
 
-#counts = [0] * 26
-counts = [0 for _ in range(26)]
-print(counts)
-
-print(ord("a"))
-
 class Solution55:
     def canJump(self, nums: List[int]) -> bool:
         length = len(nums)
@@ -105,10 +61,6 @@ class Solution55:
             if max_i>=i and i+jump>max_i:  #如果当前位置能到达，并且当前位置+跳数>最远位置
                 max_i = i+jump  #更新最远能到达位置
         return max_i>=i
-
-length = 4
-for i in reversed(range(length - 1)):
-    print(i)
 
 class Solution96:
     def numTrees(self, n: int) -> int:
@@ -171,7 +123,6 @@ class Solution621:
         numberOfMax = sum(1 for v in counts.values() if v == maxCount)
         return max(((maxCount - 1) * (n + 1) + numberOfMax), len(tasks))
 
-print(collections.Counter(["a", "c", "b", "a"]))
 
 class Solution394:
     def decodeString(self, s: str) -> str:
