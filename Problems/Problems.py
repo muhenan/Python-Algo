@@ -3,32 +3,6 @@ import math
 from typing import List
 import copy
 
-class Solution2465:
-    def distinctAverages(self, nums: List[int]) -> int:
-        nums.sort()
-        n, u = len(nums), set()
-
-        for i in range(0, n // 2):
-            u.add((nums[i] + nums[n - i - 1]) / 2)
-
-        return len(u)
-
-
-class Solution2073:
-    def timeRequiredToBuy(self, tickets: List[int], k: int) -> int:
-        result = 0
-        length = len(tickets)
-        times = tickets[k]
-        for _ in range(times):
-            for i in range(length):
-                if tickets[i] == 0: continue
-                tickets[i] -= 1
-                result += 1
-                if i == k and tickets[i] == 0: break
-        return result
-    def timeRequiredToBuy2(self, tickets: List[int], k: int) -> int: # slower
-        return sum(min(x, tickets[k] if i <= k else tickets[k] - 1) for i, x in enumerate(tickets))
-
 class Solution49:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         my_map = collections.defaultdict(list)

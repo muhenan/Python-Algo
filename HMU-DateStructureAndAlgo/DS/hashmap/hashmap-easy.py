@@ -32,3 +32,37 @@ class DeckGrouper:
                 if all(v % X == 0 for v in count.values()):
                     return True
         return False
+
+class DistinctAveragesFinder:
+    """
+    LeetCode 2465: Number of Distinct Averages
+    
+    Problem Description:
+    给定一个偶数长度的整数数组nums。每次操作：
+    1. 选择数组中的最小值和最大值
+    2. 计算它们的平均值
+    3. 从数组中删除这两个数
+    返回所有可能的不同平均值的数量。
+    
+    Example:
+    Input: nums = [4,1,4,0,3,5]
+    Output: 2
+    Explanation: 
+    1. 删除0和5，平均值2.5
+    2. 删除1和4，平均值2.5
+    3. 删除3和4，平均值3.5
+    共有2个不同的平均值：2.5和3.5
+    """
+    def distinctAverages(self, nums: List[int]) -> int:
+        # 先排序，这样最小值和最大值总是在两端
+        nums.sort()
+        n = len(nums)
+        # 使用集合存储不同的平均值
+        averages = set()
+        
+        # 每次取最左和最右的数计算平均值
+        for i in range(n // 2):
+            avg = (nums[i] + nums[n - i - 1]) / 2
+            averages.add(avg)
+            
+        return len(averages)
