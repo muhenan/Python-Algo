@@ -2,6 +2,16 @@ from collections import deque
 from typing import List
 
 """
+topological sort
+拓扑排序
+
+存在于有向无环图中
+先修课程问题，修这些课的顺序，这就是拓扑排序
+
+Topo 其实就是类似于 BFS
+"""
+
+"""
 经典先修课 -> topological sort
 
 最直接的思路
@@ -66,23 +76,3 @@ class Solution:
             return False # 没环
         return not hasCycle(numCourses)
 
-    """ 
-    Union Find
-    
-    不行，并查集 不 work，因为有的 child 需要有两个 parent 
-    """
-    # def canFinish3(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-    #     parents = list(range(numCourses))
-    #     def findParent(x):
-    #         curr = x
-    #         while curr != parents[curr]:
-    #             curr = parents[curr]
-    #         return curr
-    #
-    #     def isCyclicDirectedGraph():
-    #         for child, parent in prerequisites:
-    #             if findParent(parent) == child:
-    #                 return True
-    #             parents[child] = parent
-    #         return False
-    #     return not isCyclicDirectedGraph()
