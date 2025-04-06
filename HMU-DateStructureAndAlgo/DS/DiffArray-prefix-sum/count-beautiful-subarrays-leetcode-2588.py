@@ -43,5 +43,9 @@ class BeautifulSubarrayCounter:
             
             # Update state frequency
             state_map[current_state] = state_map.get(current_state, 0) + 1
+            """
+            也可以这样设置好初始默认值
+            my_dictionary = defaultdict(lambda : 0)
+            """
             
         return beautiful_count
