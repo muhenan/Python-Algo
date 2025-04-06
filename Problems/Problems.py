@@ -3,37 +3,6 @@ import math
 from typing import List
 import copy
 
-class Solution394:
-    def decodeString(self, s: str) -> str:
-        stack, cur_str, multi = [], "", 0
-        for c in s:
-            if '0' <= c <= '9':
-                multi = multi * 10 + int(c)
-            elif c == '[':
-                stack.append([multi, cur_str])
-                cur_str, multi = "", 0
-            elif c == ']':
-                cur_multi, previousStr = stack.pop()
-                cur_str = previousStr + cur_multi * cur_str
-            else: cur_str += c
-        return cur_str
-    def decodeString2(self, s: str) -> str: # one python method can return different values
-        def dfs(s, i):
-            currentStr, multi = "", 0
-            while i < len(s):
-                if '0' <= s[i] <= '9':
-                    multi = multi * 10 + int(s[i])
-                elif s[i] == '[':
-                    i, subStr = dfs(s, i + 1)
-                    currentStr += multi * subStr
-                    multi = 0
-                elif s[i] == ']':
-                    return i, currentStr
-                else: currentStr += s[i]
-                i += 1
-            return currentStr
-        return dfs(s, 0)
-
 class Solution581:
     def findUnsortedSubarray(self, nums: List[int]) -> int: # python's sorted is very fast, this solution beat 98.67%
         sortedArr = sorted(nums)
