@@ -4,33 +4,6 @@ from typing import List
 import copy
 
 
-class Solution448:
-    # use a 额外数组 which is a bit map
-    def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
-        res = []
-        length = len(nums)
-        bitmap = [False] * (length + 1)
-        for val in nums: bitmap[val] = True
-        for i in range(1, length + 1):
-            if not bitmap[i]: res.append(i)
-        return res
-    """
-    由于 nums 的数字范围均在[1, n][1, n]
-    中，我们可以利用这一范围之外的数字，来表达「是否存在」的含义。
-
-    具体来说，遍历 nums，每遇到一个数
-    x，就让 nums[x−1] 增加
-    n。由于 nums 中所有数均在[1, n][1, n]
-    中，增加以后，这些数必然大于 n。
-    """
-    def findDisappearedNumbers2(self, nums: List[int]) -> List[int]:
-        length = len(nums)
-        for num in nums:
-            x = (num - 1) % length
-            nums[x] += length
-        res = [i + 1 for i, num in enumerate(nums) if num <= length]
-        return res
-
 
 from collections import deque
 
