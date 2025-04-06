@@ -1,55 +1,34 @@
-import collections
-import math
-from typing import List
-import copy
-
-
-
-from collections import deque
-
-# class LRUCache146:
-#
-#     def __init__(self, capacity: int):
-#         self.capacity = capacity
-#         self.my_dict = dict()
-#         self.que = deque()
-#         return None
-#
-#     def get(self, key: int) -> int:
-#         if not key in self.my_dict: return -1
-#         self.updataQue(key)
-#         return self.my_dict[key]
-#
-#     def put(self, key: int, value: int) -> None:
-#         self.updataQue(key)
-#         self.my_dict[key] = value
-#         if len(self.my_dict) > self.capacity:
-#             self.my_dict.pop(self.que[0])
-#             self.que.popleft()
-#
-#     def updataQue(self, key:int):
-#         if self.que and self.que[0] == key:
-#             self.que.popleft()
-#         if not self.que or self.que and self.que[-1] != key:
-#             self.que.append(key)
-
 """
-数组，队列 和 LinkedList 最大的区别在于
-队列中的每个元素没有具体的地址
-而 LinkedList 中的每个 node 都有具体的地址
+LeetCode 146: LRU Cache (最近最少使用缓存)
+https://leetcode.com/problems/lru-cache/
+
+Problem Description:
+设计一个LRU (Least Recently Used) 缓存机制，需要支持以下操作：
+- get(key)：获取值，如果key不存在则返回-1
+- put(key, value)：插入或更新值，当缓存达到上限时，删除最久未使用的项
+
+要求：get 和 put 操作的时间复杂度必须是 O(1)
+
+实现方式比较：
+1. 使用OrderedDict（内置有序字典）
+2. 使用双向链表+哈希表（手动实现）
+3. 使用队列+字典（不推荐，因为队列中元素没有具体地址）
 """
 
+# 方法一：使用 OrderedDict
 class LRUCache(collections.OrderedDict):
-
+    """
+    利用Python内置的OrderedDict实现LRU缓存
+    OrderedDict能记住键值对的插入顺序
+    """
     def __init__(self, capacity: int):
         super().__init__()
         self.capacity = capacity
 
-
     def get(self, key: int) -> int:
         if key not in self:
             return -1
-        self.move_to_end(key)
+        self.move_to_end(key)  # 移动到末尾表示最近使用
         return self[key]
 
     def put(self, key: int, value: int) -> None:
@@ -57,27 +36,26 @@ class LRUCache(collections.OrderedDict):
             self.move_to_end(key)
         self[key] = value
         if len(self) > self.capacity:
-            self.popitem(last=False)
+            self.popitem(last=False)  # 删除最早插入的项
 
-
+# 方法二：双向链表节点
 class DLinkedNode:
+    """双向链表节点的定义"""
     def __init__(self, key=0, value=0):
         self.key = key
         self.value = value
         self.prev = None
         self.next = None
 
-"""
-hashmap (dictionary) + delinkedlist
-"""
-"""
-加 head 和 tail node，避免特殊情况
-"""
 class LRUCache146:
-
+    """
+    使用双向链表+哈希表实现LRU缓存
+    - 双向链表按照使用顺序存储节点
+    - 哈希表存储key到节点的映射
+    """
     def __init__(self, capacity: int):
-        self.cache = dict()
-        # 使用伪头部和伪尾部节点
+        self.cache = dict()  # 哈希表：key -> node
+        # 使用伪头部和伪尾部节点简化边界情况
         self.head = DLinkedNode()
         self.tail = DLinkedNode()
         self.head.next = self.tail
@@ -86,49 +64,51 @@ class LRUCache146:
         self.size = 0
 
     def get(self, key: int) -> int:
+        """获取值并将节点移到头部（最近使用）"""
         if key not in self.cache:
             return -1
-        # 如果 key 存在，先通过哈希表定位，再移到头部
         node = self.cache[key]
         self.moveToHead(node)
         return node.value
 
     def put(self, key: int, value: int) -> None:
+        """插入或更新值"""
         if key not in self.cache:
-            # 如果 key 不存在，创建一个新的节点
+            # 创建新节点
             node = DLinkedNode(key, value)
-            # 添加进哈希表
             self.cache[key] = node
-            # 添加至双向链表的头部
             self.addToHead(node)
             self.size += 1
             if self.size > self.capacity:
-                # 如果超出容量，删除双向链表的尾部节点
+                # 删除最久未使用的节点
                 removed = self.removeTail()
-                # 删除哈希表中对应的项
                 self.cache.pop(removed.key)
                 self.size -= 1
         else:
-            # 如果 key 存在，先通过哈希表定位，再修改 value，并移到头部
+            # 更新已存在的节点
             node = self.cache[key]
             node.value = value
             self.moveToHead(node)
 
     def addToHead(self, node):
+        """将节点添加到头部"""
         node.prev = self.head
         node.next = self.head.next
         self.head.next.prev = node
         self.head.next = node
 
     def removeNode(self, node):
+        """删除节点"""
         node.prev.next = node.next
         node.next.prev = node.prev
 
     def moveToHead(self, node):
+        """将节点移动到头部"""
         self.removeNode(node)
         self.addToHead(node)
 
     def removeTail(self):
+        """删除尾部节点（最久未使用）"""
         node = self.tail.prev
         self.removeNode(node)
-        return node
+        return node 
