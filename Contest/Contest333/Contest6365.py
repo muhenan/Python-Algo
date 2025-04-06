@@ -2,23 +2,6 @@ from typing import List
 
 
 class Solution:
-    def minOperations(self, n: int) -> int:
-        twos = set()
-        for i in range(19):
-            twos.add(2**i)
-        my_map = {}
-        def dp(number):
-            if number in twos:
-                return 1
-            if number in my_map:
-                return my_map[number]
-            aNumber = 1
-            while aNumber < number:
-                aNumber *= 2
-            my_map[number] = 1 + min(dp(aNumber - number), dp(number - aNumber // 2))
-            print(number, my_map[number])
-            return my_map[number]
-        return dp(n)
     def squareFreeSubsets(self, nums: List[int]) -> int:
         badNumbers = [4,8,9,12,16,18,20,24,25,27,28]
         nums = sorted(nums)
@@ -81,6 +64,5 @@ class Solution:
     #         return ''
 
 solu = Solution()
-solu.minOperations(54)
 
 print(solu.findTheString([[4,0,2,0],[0,3,0,1],[2,0,2,0],[0,1,0,1]]))
