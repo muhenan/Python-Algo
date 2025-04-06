@@ -3,64 +3,6 @@ import math
 from typing import List
 import copy
 
-class Solution581:
-    def findUnsortedSubarray(self, nums: List[int]) -> int: # python's sorted is very fast, this solution beat 98.67%
-        sortedArr = sorted(nums)
-        left, right = -1, -2
-        for i in range(len(nums)):
-            if sortedArr[i] != nums[i]:
-                left = i
-                break
-        for i in range(len(nums)):
-            if sortedArr[i] != nums[i]:
-                right = i
-        return right - left + 1
-    def findUnsortedSubarray2(self, nums: List[int]) -> int: # quicker
-        if len(nums) == 1: return 0
-        # find left
-        left = -3
-        for i in range(1, len(nums)):
-            if left == -1: break
-            if nums[i] < nums[i - 1]:
-                if left == -3:
-                    left = i - 1
-                while  left != -1 and nums[left] > nums[i]: left -= 1
-        # find right
-        right = -2
-        for i in reversed(range(len(nums) - 1)):
-            if right == len(nums): break
-            if nums[i] > nums[i + 1]:
-                if right == -2:
-                    right = i + 1
-                while right != len(nums) and nums[right] < nums[i]: right += 1
-        return right - left - 1
-    def findUnsortedSubarray3(self, nums: List[int]) -> int:
-        n = len(nums)
-        maxn, right = float("-inf"), -1
-        minn, left = float("inf"), -1
-
-        for i in range(n): # find right
-            if maxn > nums[i]:
-                right = i
-            else:
-                maxn = nums[i]
-
-            if minn < nums[n - i - 1]: # from the last one, find left
-                left = n - i - 1
-            else:
-                minn = nums[n - i - 1]
-
-        return 0 if right == -1 else right - left + 1
-
-arr = [2,6,4,8,10,9,15]
-solu581 = Solution581()
-solu581.findUnsortedSubarray2(arr)
-# print(sorted(arr))
-# print(arr)
-
-print(float('inf'))
-print(float('-inf'))
-
 class Solution739:
     # n^2 ...
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]: # Monotonic stack
@@ -261,10 +203,5 @@ class Solution221:
                         dp[i][j] = min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]) + 1
                     maxSide = max(maxSide, dp[i][j])
         return maxSide * maxSide
-
-
-
-
-
 
 
