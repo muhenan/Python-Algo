@@ -46,3 +46,30 @@ start_vertex = 'A'
 
 # Call BFS function
 bfs(graph, start_vertex)
+
+
+########################################################
+
+'''
+a breadth-first search (BFS) implementation that processes vertices level by level, 
+where each level is processed separately
+'''
+
+def bfs_levels(graph, start):
+    visited = set()
+    queue = deque([start])
+
+    while queue:
+        current_size = len(queue)
+
+        for _ in range(current_size):
+            vertex = queue.popleft()
+            visited.add(vertex)
+            print(vertex)  # Process the vertex (in this example, we print it)
+
+            for neighbor in graph[vertex]:
+                if neighbor not in visited:
+                    queue.append(neighbor)
+
+# Call BFS with levels
+bfs_levels(graph, start_vertex)
