@@ -1,6 +1,3 @@
-from typing import List
-
-
 class MinimumOperationsCalculator:
     """
     LeetCode 2571: Minimum Operations to Reach a Number
