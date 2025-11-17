@@ -64,6 +64,8 @@ class QuickSort:
         
         while left < right:
             # 从右向左找第一个小于pivot的数
+            # 这里的顺序非常重要，一定得是先从右走，这样最后退出的时候 left 和 right 相等的时候
+            # 指着的一定是一个小于 pivot 的值，这样刚好把这个值换到左边
             while left < right and nums[right] >= pivot:
                 right -= 1
             # 从左向右找第一个大于pivot的数
