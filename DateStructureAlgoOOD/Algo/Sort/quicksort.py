@@ -79,7 +79,11 @@ class QuickSort:
         nums[start] = nums[left]
         nums[left] = pivot
         return left  # left和right相等，返回哪个都一样
-    
+
+    """
+    这里最核心的就是这个 _partition_right
+    其他函数都调用这个函数，所以这个函数是整个快速排序的核心
+    """
     def _partition_right(self, nums: List[int], left: int, right: int) -> int:
         """
         使用最右元素作为pivot的partition方法
@@ -87,17 +91,17 @@ class QuickSort:
         双指针！！！！
         """
         pivot = nums[right]  # 选择最右元素作为pivot
-        i = left - 1        # i指向小于pivot的最后一个元素
+        i = left             # 要换的数
         
         # j遍历数组，将小于pivot的元素移到左边
         for j in range(left, right):
             if nums[j] <= pivot:
-                i += 1
                 nums[i], nums[j] = nums[j], nums[i]
+                i += 1
         
         # 将pivot放到正确位置
-        nums[i + 1], nums[right] = nums[right], nums[i + 1]
-        return i + 1
+        nums[i], nums[right] = nums[right], nums[i]
+        return i
     
     def _partition_random(self, nums: List[int], left: int, right: int) -> int:
         """
