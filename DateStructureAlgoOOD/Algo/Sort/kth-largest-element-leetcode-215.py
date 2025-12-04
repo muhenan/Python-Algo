@@ -74,28 +74,51 @@ class KthLargestFinder:
     def _partition(self, nums: List[int], left: int, right: int) -> int:
         """
         快速选择的partition操作
-        使用最左元素作为pivot
-        特点：先处理大于等于pivot的元素，确保相遇点是较小的元素
+        使用最右元素作为pivot
         """
-        pivot = nums[left]
-        start = left
+        pivot = nums[right]
+        l = left
         
-        while left < right:
-            # 从右向左找第一个小于pivot的数
-            while left < right and nums[right] >= pivot:
-                right -= 1
-            # 从左向右找第一个大于pivot的数
-            while left < right and nums[left] <= pivot:
-                left += 1
-            # 交换这两个数
-            if left < right:
-                nums[left], nums[right] = nums[right], nums[left]
+        for i in range(left, right):
+            if nums[i] < pivot:
+                nums[l], nums[i] = nums[i], nums[l]
+                l += 1
+        nums[l], nums[right] = nums[right], nums[l]
+        return l
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        """寻找数组中的第k个最大元素"""
+        random.seed()  # 初始化随机数种子，确保每次基准选择随机
+        return self.quickSelect(nums, k)
+    
+    def quickSelect(self, nums: List[int], k: int) -> int:
+        """快速选择核心函数：在nums中找到第k大元素"""
+        # 随机选择基准元素
+        pivot = nums[random.randint(0, len(nums) - 1)]
         
-        # 将pivot放到最终位置
-        nums[start] = nums[left]
-        nums[left] = pivot
-        return left  # left和right相等，返回哪个都一样
-
+        # 划分为三个子数组：
+        # big：存储所有 大于基准 的元素
+        # equal：存储所有 等于基准 的元素
+        # small：存储所有 小于基准 的元素
+        big, equal, small = [], [], []
+        for x in nums:
+            if x > pivot:
+                big.append(x)
+            elif x < pivot:
+                small.append(x)
+            else:
+                equal.append(x)
+        
+        # 根据三个子数组的长度与k比较的情况，决定递归方向
+        # 情况1：第k大元素在big数组中（k <= big的长度）
+        if k <= len(big):
+            return self.quickSelect(big, k)
+        # 情况2：第k大元素在small数组中（k > big + equal的长度）
+        elif k > len(big) + len(equal):
+            # 调整k：减去big和equal的长度
+            return self.quickSelect(small, k - (len(big) + len(equal)))
+        # 情况3：第k大元素在equal数组中（直接返回基准值）
+        else:
+            return pivot
 
 # 测试代码
 if __name__ == "__main__":
