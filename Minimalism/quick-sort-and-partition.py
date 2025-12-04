@@ -1,5 +1,6 @@
 """
 Minimalism version of quick sort partition
+核心就是这个函数，其他都是调用这个函数
 """
 def partition(nums, left, right):
     pivot = nums[right]
