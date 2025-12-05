@@ -7,6 +7,11 @@ def quicksort(nums,l,r):
     quicksort(nums,l,idx-1)
     quicksort(nums,idx+1,r)
 
+"""
+重中之重
+从小到大排序的 partition 函数，pivot 选最右边的元素
+j 是大于 pivot 的元素的第一个位置，是要换掉的位置
+"""
 def partition_d(nums,l,r):
     pivot = nums[r]
     j = l
