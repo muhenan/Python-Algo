@@ -61,7 +61,6 @@ class LRUCache146:
         self.head.next = self.tail
         self.tail.prev = self.head
         self.capacity = capacity
-        self.size = 0
 
     def get(self, key: int) -> int:
         """获取值并将节点移到头部（最近使用）"""
@@ -78,12 +77,11 @@ class LRUCache146:
             node = DLinkedNode(key, value)
             self.cache[key] = node
             self.addToHead(node)
-            self.size += 1
-            if self.size > self.capacity:
+            if len(self.cache) > self.capacity:
                 # 删除最久未使用的节点
-                removed = self.removeTail()
-                self.cache.pop(removed.key)
-                self.size -= 1
+                to_remove = self.tail.prev
+                self.removeNode(to_remove)
+                self.cache.pop(to_remove.key) # 或者可以写 del self.cache[removed.key]
         else:
             # 更新已存在的节点
             node = self.cache[key]
@@ -106,9 +104,3 @@ class LRUCache146:
         """将节点移动到头部"""
         self.removeNode(node)
         self.addToHead(node)
-
-    def removeTail(self):
-        """删除尾部节点（最久未使用）"""
-        node = self.tail.prev
-        self.removeNode(node)
-        return node 
