@@ -1,6 +1,6 @@
 from typing import Optional
 
-from Labuladong.Tree import TreeNode
+from utils.TreeNode import TreeNode
 
 
 class Solution:

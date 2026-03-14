@@ -1,5 +1,5 @@
 from typing import Optional
-from ListNode import ListNode
+from utils.ListNode import ListNode
 
 """
 LeetCode 148: Sort List

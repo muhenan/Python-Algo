@@ -1,5 +1,5 @@
 from typing import Optional
-from ListNode import ListNode
+from utils.ListNode import ListNode
 
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:

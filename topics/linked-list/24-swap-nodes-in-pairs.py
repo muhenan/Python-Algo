@@ -1,5 +1,5 @@
 from typing import Optional
-from ListNode import ListNode
+from utils.ListNode import ListNode
 
 class Solution:
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:

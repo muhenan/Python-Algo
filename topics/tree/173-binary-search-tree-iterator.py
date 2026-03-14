@@ -1,6 +1,6 @@
 from typing import Optional
 
-from DateStructureAlgoOOD.DS.Tree.TreeNode import TreeNode
+from utils.TreeNode import TreeNode
 
 """
 LeetCode 173: Binary Search Tree Iterator
