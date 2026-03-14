@@ -177,3 +177,41 @@ Algo and python data structures
 
 ### Zip
 - [Zip Learn · Python zip函数学习](topics/zip/zip_learn.py)
+
+---
+
+## Quick Reference
+
+### Partition
+```python
+def partition(nums, l, r):      # pivot = nums[r], 升序
+    pivot, i = nums[r], l
+    for j in range(l, r):
+        if nums[j] <= pivot:
+            nums[i], nums[j] = nums[j], nums[i]
+            i += 1
+    nums[i], nums[r] = nums[r], nums[i]
+    return i
+```
+
+### Quick Sort
+```python
+def quicksort(nums, l, r):
+    if l >= r: return
+    idx = partition(nums, l, r)
+    quicksort(nums, l, idx - 1)
+    quicksort(nums, idx + 1, r)
+```
+
+### Kth Largest — Quick Select
+```python
+def findKthLargest(nums, k):
+    k = len(nums) - k       # 转换为第 k 小
+    l, r = 0, len(nums) - 1
+    while l < r:
+        idx = partition(nums, l, r)
+        if idx == k: break
+        elif idx < k: l = idx + 1
+        else: r = idx - 1
+    return nums[k]
+```
