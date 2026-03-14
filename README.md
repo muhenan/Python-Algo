@@ -215,3 +215,82 @@ def findKthLargest(nums, k):
         else: r = idx - 1
     return nums[k]
 ```
+
+### BFS
+```python
+from collections import deque
+
+def bfs(graph, start):
+    visited, queue = {start}, deque([start])
+    while queue:
+        for _ in range(len(queue)):          # 逐层处理
+            node = queue.popleft()
+            for neighbor in graph[node]:
+                if neighbor not in visited:
+                    visited.add(neighbor)
+                    queue.append(neighbor)
+```
+
+### DFS
+```python
+def dfs(graph, node, visited=None):
+    if visited is None: visited = set()
+    visited.add(node)
+    for neighbor in graph[node]:
+        if neighbor not in visited:
+            dfs(graph, neighbor, visited)
+```
+
+### Backtracking 回溯
+```python
+def backtrack(start, path):
+    if len(path) == k:                       # 终止条件按题调整
+        res.append(path[:])
+        return
+    for i in range(start, len(candidates)):
+        path.append(candidates[i])
+        backtrack(i + 1, path)               # i 允许重复，i+1 不允许
+        path.pop()
+
+res = []
+backtrack(0, [])
+```
+
+### Binary Search 二分
+```python
+def binary_search(nums, target):
+    l, r = 0, len(nums) - 1
+    while l <= r:
+        mid = l + (r - l) // 2
+        if nums[mid] == target: return mid
+        elif nums[mid] < target: l = mid + 1
+        else: r = mid - 1
+    return l                                 # 找不到时返回插入位置，可能插在最后一位后面
+```
+Example:
+```python
+nums = [1,2,5,7]
+target = 4
+print(binary_search(nums, target))  # 2
+
+1 - 2 - 5 - 7
+        ^    
+        4
+```
+
+### Sliding Window 滑动窗口
+
+LC 3 · Longest Substring Without Repeating Characters 无重复字符最长子串
+```python
+# invalid = 窗口内有字符出现超过 1 次
+def lengthOfLongestSubstring(s):
+    window = {}
+    l, res = 0, 0
+    for r, c in enumerate(s):
+        window[c] = window.get(c, 0) + 1
+        while window[c] > 1:              # 不满足条件时收缩左边
+            window[s[l]] -= 1
+            l += 1
+        res = max(res, r - l + 1)         # 更新答案
+    return res
+```
