@@ -29,3 +29,151 @@ Algo and python data structures
 - **2392** [Build a Matrix With Conditions](topics/bfs/2392-build-a-matrix-with-conditions.py)
 - **2603** [Collect Coins in a Tree · 收集树中金币 (BFS)](topics/bfs/2603-collect-coins-in-a-tree-bfs.py)
 - [Labuladong BFS · BFS框架学习](topics/bfs/labuladong-bfs.py)
+
+### Binary Search 二分搜索
+- **35** [Search Insert Position · 搜索插入位置](topics/binary-search/35-search-insert-position.py)
+- **2812** [Find the Safeness Factor of a Path](topics/binary-search/2812-find-the-safeness-factor-of-a-path.py)
+- [Bisect Learn · Python bisect模块学习](topics/binary-search/bisect_learn.py)
+
+### Design 设计
+- **146** [LRU Cache · LRU缓存](topics/design/146-lru-cache.py)
+- **353** [Design Snake Game · 设计贪吃蛇](topics/design/353-design-snake-game.py)
+- **362** [Design Hit Counter · 设计点击计数器](topics/design/362-design-hit-counter.py)
+- [LRU Cache with TTL · 带过期时间的LRU缓存](topics/design/LRUCacheWithTTL.py)
+
+### DFS 深度优先搜索
+- **2596** [Check Knight Tour Configuration](topics/dfs/2596-check-knight-tour-configuration.py)
+- **2603** [Collect Coins in a Tree · 收集树中金币 (DFS)](topics/dfs/2603-collect-coins-in-a-tree.py)
+- [Labuladong DFS · DFS框架学习](topics/dfs/labuladong-dfs.py)
+
+### DFS Backtracking 回溯
+- **39** [Combination Sum · 组合总和](topics/dfs-backtracking/39-combination-sum.py)
+- **2597** [The Number of Beautiful Subsets](topics/dfs-backtracking/2597-the-number-of-beautiful-subsets.py)
+
+### DP 动态规划
+- **10** [Regular Expression Matching · 正则表达式匹配](topics/dp/10-regular-expression-matching.py)
+- **32** [Longest Valid Parentheses · 最长有效括号](topics/dp/32-longest-valid-parentheses.py)
+- **53** [Maximum Subarray · 最大子数组和](topics/dp/53-maximum-subarray.py)
+- **72** [Edit Distance · 编辑距离](topics/dp/72-edit-distance.py)
+- **221** [Maximal Square · 最大正方形](topics/dp/221-maximal-square.py)
+- **300** [Longest Increasing Subsequence · 最长递增子序列](topics/dp/300-longest-increasing-subsequence.py)
+- **322** [Coin Change · 零钱兑换](topics/dp/322-coin-change.py)
+- **516** [Longest Palindromic Subsequence · 最长回文子序列](topics/dp/516-longest-palindromic-subsequence.py)
+- **651** [4 Keys Keyboard · 4键键盘](topics/dp/651-4-keys-keyboard.py)
+- **887** [Super Egg Drop · 鸡蛋掉落](topics/dp/887-super-egg-drop.py)
+- **1312** [Minimum Insertion Steps to Make a String Palindrome](topics/dp/1312-minimum-insertion-steps-to-make-a-string-palindrome.py)
+- **1884** [Egg Drop With 2 Eggs and N Floors](topics/dp/1884-egg-drop-with-2-eggs-and-n-floors.py)
+- **2571** [Minimum Operations to Reduce an Integer to 0](topics/dp/2571-minimum-operations-to-reduce-an-integer-to-0.py)
+- [DP Easy · 基础练习](topics/dp/dp-easy.py)
+- [LIS · 最长递增子序列算法实现](topics/dp/LIS.py)
+
+### Graph 图
+- **133** [Clone Graph · 克隆图](topics/graph/133-clone-graph.py)
+- **310** [Minimum Height Trees · 最小高度树](topics/graph/310-minimum-height-trees.py)
+- **417** [Pacific Atlantic Water Flow · 太平洋大西洋水流](topics/graph/417-pacific-atlantic-water-flow.py)
+- **743** [Network Delay Time · 网络延迟时间](topics/graph/743-network-delay-time.py)
+- **997** [Find the Town Judge · 找到小镇的法官](topics/graph/997-find-the-town-judge.py)
+- **2492** [Minimum Score of a Path Between Two Cities](topics/graph/2492-minimum-score-of-a-path-between-two-cities.py)
+- **2577** [Minimum Time to Visit a Cell in a Grid](topics/graph/2577-minimum-time-to-visit-a-cell-in-a-grid.py)
+- [Has Cycle · 环检测](topics/graph/hasCycle.py)
+
+### Greedy 贪心
+- **55** [Jump Game · 跳跃游戏](topics/greedy/55-jump-game.py)
+- **455** [Assign Cookies · 分发饼干](topics/greedy/455-assign-cookies.py)
+- **621** [Task Scheduler · 任务调度器](topics/greedy/621-task-scheduler.py)
+- **6085** [Maximum Importance of a Road · 道路的最大总重要性](topics/greedy/6085-maximum-importance-of-a-road.py)
+
+### HashMap 哈希表
+- **170** [Two Sum III - Data Structure Design](topics/hashmap/170-two-sum-iii-data-structure-design.py)
+- **448** [Find All Numbers Disappeared in an Array · 找到所有消失的数字](topics/hashmap/448-find-all-numbers-disappeared-in-an-array.py)
+- **506** [Relative Ranks · 相对名次](topics/hashmap/506-relative-ranks.py)
+- **2598** [Smallest Missing Non-negative Integer](topics/hashmap/2598-smallest-missing-non-negative-integer.py)
+- [HashMap Easy · 基础练习](topics/hashmap/hashmap-easy.py)
+
+### Heap 堆
+- **253** [Meeting Rooms II · 会议室II](topics/heap/253-meeting-rooms-ii.py)
+- **264** [Ugly Number II · 丑数II](topics/heap/264-ugly-number-ii.py)
+- **295** [Find Median from Data Stream](topics/heap/295-find-median-from-data-stream.py)
+- **373** [Find K Pairs with Smallest Sums](topics/heap/373-find-k-pairs-with-smallest-sums.py)
+- **703** [Kth Largest Element in a Stream](topics/heap/703-kth-largest-element-in-a-stream.py)
+- **933** [Number of Recent Calls · 最近的请求次数](topics/heap/933-number-of-recent-calls.py)
+- **2534** [Time Taken to Cross the Door](topics/heap/2534-time-taken-to-cross-the-door.py)
+- [Min Heap · 最小堆实现](topics/heap/minheap.py)
+- [Min Heap (heapq) · 基于heapq的最小堆](topics/heap/minheap_heapq.py)
+- [Bounded Min Heap · 有界最小堆实现](topics/heap/BoundedMinHeap.py)
+
+### Linked List 链表
+- **19** [Remove Nth Node From End · 删除链表倒数第N个节点](topics/linked-list/19-remove-nth-node-from-end-of-list.py)
+- **23** [Merge K Sorted Lists · 合并K个升序链表](topics/linked-list/23-merge-k-sorted-lists.py)
+- **24** [Swap Nodes in Pairs · 两两交换链表节点](topics/linked-list/24-swap-nodes-in-pairs.py)
+- **25** [Reverse Nodes in K-Group · K个一组翻转链表](topics/linked-list/25-reverse-nodes-in-k-group.py)
+- **92** [Reverse Linked List II · 反转链表II](topics/linked-list/92-reverse-linked-list-ii.py)
+- **148** [Sort List · 排序链表](topics/linked-list/148-sort-list.py)
+- **206** [Reverse Linked List · 反转链表](topics/linked-list/206-reverse-linked-list.py)
+- **1721** [Swapping Nodes in a Linked List · 交换链表中的节点](topics/linked-list/1721-swapping-nodes-in-a-linked-list.py)
+- **2074** [Reverse Nodes in Even Length Groups](topics/linked-list/2074-reverse-nodes-in-even-length-groups.py)
+- [Remove Elements · 移除链表元素 (LC 203)](topics/linked-list/removeElements.py)
+
+### Math 数学
+- **2575** [Find the Divisibility Array of a String](topics/math/2575-find-the-divisibility-array-of-a-string.py)
+
+### Monotonic Stack 单调栈
+- **239** [Sliding Window Maximum · 滑动窗口最大值](topics/monotonic-stack/239-sliding-window-maximum.py)
+- [Monotonic Stack · 单调栈学习](topics/monotonic-stack/monotonic-stack.py)
+
+### Prefix Sum & Diff Array 前缀和与差分数组
+- **729** [My Calendar I · 我的日程安排表I](topics/prefix-sum-and-diff-array/729-my-calendar-i.py)
+- **731** [My Calendar II · 我的日程安排表II](topics/prefix-sum-and-diff-array/731-my-calendar-ii.py)
+- **1371** [Find the Longest Substring Containing Vowels in Even Counts](topics/prefix-sum-and-diff-array/1371-find-the-longest-substring-containing-vowels-in-even-counts.py)
+- **2574** [Left and Right Sum Differences · 左右元素和的差值](topics/prefix-sum-and-diff-array/2574-left-and-right-sum-differences.py)
+- **2588** [Count the Number of Beautiful Subarrays](topics/prefix-sum-and-diff-array/2588-count-the-number-of-beautiful-subarrays.py)
+- [Diff Array · 差分数组学习](topics/prefix-sum-and-diff-array/diff_array.py)
+- [Vowel Strings · 元音字符串](topics/prefix-sum-and-diff-array/vowelStrings.py)
+
+### Regex 正则表达式
+- [Regex Learn · Python正则表达式学习](topics/regex/regex_learn.py)
+
+### Segment Tree 线段树
+- [Segment Tree · 线段树实现](topics/segment-tree/SegmentTree.py)
+
+### Sliding Window 滑动窗口
+- **76** [Minimum Window Substring · 最小覆盖子串](topics/sliding-window/76-minimum-window-substring.py)
+- **159** [Longest Substring with At Most Two Distinct Characters](topics/sliding-window/159-longest-substring-with-at-most-two-distinct-characters.py)
+- **2765** [Longest Alternating Subarray · 最长交替子数组](topics/sliding-window/2765-longest-alternating-subarray.py)
+- [Sliding Window Easy · 基础练习](topics/sliding-window/sliding-window-easy.py)
+
+### Sorting 排序
+- **215** [Kth Largest Element in an Array · 数组中的第K个最大元素](topics/sorting/215-kth-largest-element-in-an-array.py)
+- [Quicksort · 快速排序实现](topics/sorting/quicksort.py)
+- [Quicksort (Short) · 简洁快速排序](topics/sorting/short_quicksort.py)
+- [Heap Sort · 堆排序实现](topics/sorting/heap_sort.py)
+
+### Stack 栈
+- **20** [Valid Parentheses · 有效的括号](topics/stack/20-valid-parentheses.py)
+- **71** [Simplify Path · 简化路径](topics/stack/71-simplify-path.py)
+- **155** [Min Stack · 最小栈](topics/stack/155-min-stack.py)
+- **394** [Decode String · 字符串解码](topics/stack/394-decode-string.py)
+
+### String 字符串
+- **647** [Palindromic Substrings · 回文子串](topics/string/647-palindromic-substrings.py)
+- **2490** [Circular Sentence · 循环句](topics/string/2490-circular-sentence.py)
+- [String Easy · 基础练习](topics/string/string-easy.py)
+
+### Tree 树
+- **99** [Recover Binary Search Tree · 恢复二叉搜索树](topics/tree/99-recover-binary-search-tree.py)
+- **173** [Binary Search Tree Iterator · 二叉搜索树迭代器](topics/tree/173-binary-search-tree-iterator.py)
+- [Blind Trees · 树题集合练习](topics/tree/blindtrees.py)
+- [Inorder Traversal (Iterative) · 中序遍历迭代实现](topics/tree/inorderTraversal_iter.py)
+
+### Two Pointers 双指针
+- **16** [3Sum Closest · 最接近的三数之和](topics/two-pointers/16-3sum-closest.py)
+- **2491** [Divide Players Into Teams of Equal Skill](topics/two-pointers/2491-divide-players-into-skill-equal-teams.py)
+- **2576** [Find the Maximum Number of Marked Indices](topics/two-pointers/2576-find-the-maximum-number-of-marked-indices.py)
+- [Amazon - Is Subsequence · 是否子序列](topics/two-pointers/amazon-2-issubsequence-YXY.py)
+
+### Union Find 并查集
+- **399** [Evaluate Division · 除法求值](topics/union-find/399-evaluate-division.py)
+- [Union Find · 并查集实现](topics/union-find/UF.py)
+
+### Zip
+- [Zip Learn · Python zip函数学习](topics/zip/zip_learn.py)
