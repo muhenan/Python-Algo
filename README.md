@@ -294,3 +294,138 @@ def lengthOfLongestSubstring(s):
         res = max(res, r - l + 1)         # 更新答案
     return res
 ```
+
+### Union Find 并查集
+```python
+class UnionFind:
+    def __init__(self, n):
+        self.parent = list(range(n))
+        self.size = [1] * n
+
+    def find(self, x):
+        if self.parent[x] != x:
+            self.parent[x] = self.find(self.parent[x])  # 路径压缩
+        return self.parent[x]
+
+    def union(self, x, y):
+        px, py = self.find(x), self.find(y)
+        if px == py: return False
+        if self.size[px] < self.size[py]: px, py = py, px
+        self.parent[py] = px
+        self.size[px] += self.size[py]
+        return True
+```
+
+### Two Pointers 对撞指针
+```python
+def two_pointers(nums, target):
+    nums.sort()
+    l, r = 0, len(nums) - 1
+    while l < r:
+        s = nums[l] + nums[r]
+        if s == target: return [l, r]
+        elif s < target: l += 1
+        else: r -= 1
+```
+
+### Monotonic Stack 单调栈
+```python
+def nextGreater(nums):          # 下一个更大元素
+    res = [-1] * len(nums)
+    stack = []                  # 存 index，栈内单调递减
+    for i, n in enumerate(nums):
+        while stack and nums[stack[-1]] < n:
+            res[stack.pop()] = n
+        stack.append(i)
+    return res
+```
+
+### Prefix Sum 前缀和
+```python
+prefix = [0] * (len(nums) + 1)
+for i, n in enumerate(nums):
+    prefix[i + 1] = prefix[i] + n
+
+# 查询 [l, r] 区间和 (0-indexed)
+range_sum = prefix[r + 1] - prefix[l]
+```
+
+### LIS O(n log n)
+```python
+from bisect import bisect_left
+
+def lis(nums):
+    tails = []
+    for n in nums:
+        i = bisect_left(tails, n)
+        if i == len(tails): tails.append(n)
+        else: tails[i] = n
+    return len(tails)
+```
+
+手写 binary search 版本：
+```python
+from typing import List
+
+def lengthOfLIS(nums: List[int]) -> int:
+    d = []
+    for n in nums:
+        if not d or n > d[-1]:
+            d.append(n)
+        else:
+            l, r = 0, len(d) - 1
+            loc = r
+            while l <= r:
+                mid = (l + r) // 2
+                if d[mid] >= n:
+                    loc = mid
+                    r = mid - 1
+                else:
+                    l = mid + 1
+            d[loc] = n
+    return len(d)
+```
+
+### Heap Top-K
+```python
+import heapq
+
+def topK(nums, k):              # 最大的 k 个，小顶堆维护
+    heap = []
+    for n in nums:
+        heapq.heappush(heap, n)
+        if len(heap) > k:
+            heapq.heappop(heap)
+    return list(heap)           # heap[0] 是第 k 大
+```
+
+### Reverse Linked List 反转链表
+```python
+def reverseList(head):
+    prev = None
+    curr = head
+
+    while curr:
+        next_node = curr.next   # 先保存下一个节点
+        curr.next = prev        # 当前节点反转指向前一个节点
+        prev = curr             # prev 前进到当前节点
+        curr = next_node        # curr 前进到原来的下一个节点
+
+    return prev
+```
+
+### Fast & Slow Pointers 快慢指针
+```python
+def findMiddle(head):           # 找中点
+    slow = fast = head
+    while fast and fast.next:
+        slow, fast = slow.next, fast.next.next
+    return slow
+
+def hasCycle(head):             # 判环
+    slow = fast = head
+    while fast and fast.next:
+        slow, fast = slow.next, fast.next.next
+        if slow == fast: return True
+    return False
+```
