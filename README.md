@@ -16,6 +16,7 @@ Algo and python data structures
 ### Array 数组
 - **1** [Two Sum · 两数之和](topics/array/1-two-sum.py)
 - **48** [Rotate Image · 旋转图像](topics/array/48-rotate-image.py)
+- **54** [Spiral Matrix · 螺旋矩阵](topics/array/54-spiral-matrix.py)
 - **152** [Maximum Product Subarray · 乘积最大子数组](topics/array/152-maximum-product-subarray.py)
 - **528** [Random Pick with Weight · 按权重随机选择](topics/array/528-random-pick-with-weight.py)
 - **1470** [Shuffle the Array · 重新排列数组](topics/array/1470-shuffle-the-array.py)
