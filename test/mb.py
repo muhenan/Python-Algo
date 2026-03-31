@@ -19,40 +19,42 @@
 #     }，
 #
 # ]
-from pyclbr import Class
-
 
 def dfs(operators, m, exclusions, current_ans, ans):
     if len(current_ans) == m:
-        ans_once = []
-        for v in current_ans:
-            ans_once.append(v)
-        ans.append(ans_once)
+        ans.append(current_ans[:])
         return
-    for i in range(len(operators)):
-        if (len(current_ans) == 0 or current_ans[-1] not in exclusions or operators[i] not in exclusions[current_ans[-1]]):
-            current_ans.append(operators[i])
+    for operator in operators:
+        if len(current_ans) == 0 or operator not in exclusions.get(current_ans[-1], []):
+            current_ans.append(operator)
             dfs(operators, m, exclusions, current_ans, ans)
             current_ans.pop()
 
-operators = ["A", "B"]
-m = 2
-exclusions = {"A": ["A", "B"], "B": ["A", "B"]}
 
-ans = []
+def generate_pipelines(operators, m, exclusions):
+    ans = []
+    dfs(operators, m, exclusions, [], ans)
+    return ans
 
-dfs(operators, m, exclusions, [], ans)
 
-print(ans)
-print(len(ans))
+if __name__ == "__main__":
+    test_cases = [
+        {
+            "operators": ["A", "B"],
+            "m": 2,
+            "exclusions": {"A": ["A", "B"], "B": ["A", "B"]},
+            "expected_length": 0,
+        },
+        {
+            "operators": ["clean", "tokenize", "normalize"],
+            "m": 3,
+            "exclusions": {"clean": ["clean"], "tokenize": ["clean", "tokenize"]},
+            "expected_length": 13,
+        },
+    ]
 
-operators = ["clean", "tokenize", "normalize"]
-m = 3
-exclusions = {"clean": ["clean"], "tokenize": ["clean", "tokenize"]}
-
-ans = []
-
-dfs(operators, m, exclusions, [], ans)
-
-print(ans)
-print(len(ans))
+    for i, case in enumerate(test_cases, 1):
+        ans = generate_pipelines(case["operators"], case["m"], case["exclusions"])
+        print(f"case {i}: {ans}")
+        print(f"case {i} length: {len(ans)}")
+        assert len(ans) == case["expected_length"]
