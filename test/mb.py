@@ -23,24 +23,32 @@ from pyclbr import Class
 
 
 def dfs(operators, m, exclusions, current_ans, ans):
-    if len(current_ans) > m:
-        return
     if len(current_ans) == m:
         ans_once = []
         for v in current_ans:
             ans_once.append(v)
         ans.append(ans_once)
+        return
     for i in range(len(operators)):
         if (len(current_ans) == 0 or current_ans[-1] not in exclusions or operators[i] not in exclusions[current_ans[-1]]):
             current_ans.append(operators[i])
             dfs(operators, m, exclusions, current_ans, ans)
             current_ans.pop()
-        else:
-            continue
 
 operators = ["A", "B"]
 m = 2
 exclusions = {"A": ["A", "B"], "B": ["A", "B"]}
+
+ans = []
+
+dfs(operators, m, exclusions, [], ans)
+
+print(ans)
+print(len(ans))
+
+operators = ["clean", "tokenize", "normalize"]
+m = 3
+exclusions = {"clean": ["clean"], "tokenize": ["clean", "tokenize"]}
 
 ans = []
 
