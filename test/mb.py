@@ -20,6 +20,15 @@
 #
 # ]
 
+'''
+deep copy
+
+ans.append(current_ans[:])
+ans.append(list(current_ans))
+ans.append(current_ans.copy())
+ans.append([x for x in current_ans])
+'''
+
 def dfs(operators, m, exclusions, current_ans, ans):
     if len(current_ans) == m:
         ans.append(current_ans[:])
