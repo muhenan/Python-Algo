@@ -30,13 +30,6 @@ def dfs(operators, m, exclusions, current_ans, ans):
             dfs(operators, m, exclusions, current_ans, ans)
             current_ans.pop()
 
-
-def generate_pipelines(operators, m, exclusions):
-    ans = []
-    dfs(operators, m, exclusions, [], ans)
-    return ans
-
-
 if __name__ == "__main__":
     test_cases = [
         {
@@ -54,7 +47,8 @@ if __name__ == "__main__":
     ]
 
     for i, case in enumerate(test_cases, 1):
-        ans = generate_pipelines(case["operators"], case["m"], case["exclusions"])
+        ans = []
+        dfs(case["operators"], case["m"], case["exclusions"], [], ans)
         print(f"case {i}: {ans}")
         print(f"case {i} length: {len(ans)}")
         assert len(ans) == case["expected_length"]
