@@ -124,6 +124,7 @@ Algo and python data structures
 - [Monotonic Stack · 单调栈学习](topics/monotonic-stack/monotonic-stack.py)
 
 ### Prefix Sum & Diff Array 前缀和与差分数组
+- **560** [Subarray Sum Equals K · 和为 K 的子数组](topics/prefix-sum-and-diff-array/560-subarray-sum-equals-k.py)
 - **729** [My Calendar I · 我的日程安排表I](topics/prefix-sum-and-diff-array/729-my-calendar-i.py)
 - **731** [My Calendar II · 我的日程安排表II](topics/prefix-sum-and-diff-array/731-my-calendar-ii.py)
 - **1371** [Find the Longest Substring Containing Vowels in Even Counts](topics/prefix-sum-and-diff-array/1371-find-the-longest-substring-containing-vowels-in-even-counts.py)
