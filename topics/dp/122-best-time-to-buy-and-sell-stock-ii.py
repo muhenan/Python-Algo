@@ -45,6 +45,10 @@ class Solution:
             ans += max(0, prices[i] - prices[i-1])
         return ans
 
+    def maxProfit2(self, prices: List[int]) -> int:
+        # one-liner
+        return sum(max(0, prices[i] - prices[i-1]) for i in range(1, len(prices)))
+
 
 # Tests
 if __name__ == "__main__":

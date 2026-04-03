@@ -35,7 +35,16 @@ from typing import List
 
 class Solution:
     def maxProfit(self, k: int, prices: List[int]) -> int:
-        pass
+        buy = [-(10**9)] * k  # k 个 buy 状态
+        sell = [0] * k        # k 个 sell 状态
+        for i in range(len(prices)):
+            for j in range(k):
+                if j == 0:
+                    buy[j] = max(buy[j], -prices[i])
+                else:
+                    buy[j] = max(buy[j], sell[j - 1] - prices[i])
+                sell[j] = max(sell[j], buy[j] + prices[i])
+        return sell[-1]
 
 
 # Tests
