@@ -19,6 +19,7 @@ Space Complexity: O(1) extra space.
 """
 
 from typing import List
+from itertools import accumulate
 
 
 class Solution:
@@ -26,6 +27,10 @@ class Solution:
         for i in range(1, len(nums)):
             nums[i] = max(nums[i], nums[i - 1] + nums[i])
         return max(nums)
+
+    def maxSubArray2(self, nums: List[int]) -> int:
+        # one-liner
+        return max(accumulate(nums, lambda a, b: max(b, a + b)))
 
 """
 

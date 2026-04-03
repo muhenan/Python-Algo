@@ -27,10 +27,7 @@ class Solution:
             graph[pre].append(to)
             indegree[to] += 1
         visited = [False] * numCourses
-        start_q = deque([])
-        for i in range(numCourses):
-            if indegree[i] == 0:
-                start_q.append(i)
+        start_q = deque(i for i in range(numCourses) if indegree[i] == 0)
         while start_q:
             curr = start_q.popleft()
             visited[curr] = True
@@ -69,10 +66,5 @@ class Solution:
             color[index] = 2
             return False
 
-        def hasCycle(k):
-            for i in range(k):
-                if color[i] == 0 and dfs(i):
-                    return True # 有环
-            return False # 没环
-        return not hasCycle(numCourses)
+        return not any(color[i] == 0 and dfs(i) for i in range(numCourses))
 

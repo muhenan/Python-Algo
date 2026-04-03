@@ -99,14 +99,9 @@ class KthLargestFinder:
         # big：存储所有 大于基准 的元素
         # equal：存储所有 等于基准 的元素
         # small：存储所有 小于基准 的元素
-        big, equal, small = [], [], []
-        for x in nums:
-            if x > pivot:
-                big.append(x)
-            elif x < pivot:
-                small.append(x)
-            else:
-                equal.append(x)
+        big   = [x for x in nums if x > pivot]
+        equal = [x for x in nums if x == pivot]
+        small = [x for x in nums if x < pivot]
         
         # 根据三个子数组的长度与k比较的情况，决定递归方向
         # 情况1：第k大元素在big数组中（k <= big的长度）

@@ -22,9 +22,5 @@ class Solution:
             dfs(row - 1, i, aVisited)
         for i in range(row):
             dfs(i, col - 1, aVisited)
-        ans = []
-        for r in range(row):
-            for c in range(col):
-                if pVisited[r][c] and aVisited[r][c]:
-                    ans.append([r, c])
-        return ans
+        # list comprehension 中左边的 for 是外层，右边的是内层，等价于 for r: for c:
+        return [[r, c] for r in range(row) for c in range(col) if pVisited[r][c] and aVisited[r][c]]

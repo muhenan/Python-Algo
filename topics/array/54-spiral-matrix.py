@@ -31,14 +31,13 @@ class Solution:
                 for i in range(top, bottom + 1):
                     res.append(matrix[i][left])
                 return res
-            for i in range(left, right):
-                res.append(matrix[top][i])
-            for i in range(top, bottom):
-                res.append(matrix[i][right])
-            for i in range(right, left, -1):
-                res.append(matrix[bottom][i])
-            for i in range(bottom, top, -1):
-                res.append(matrix[i][left])
+            # extend + generator expression: 无额外空间，惰性求值，每次只产出一个元素直接塞进 res
+            # 对比 extend([... for ...])：有方括号会先建临时 list，多用 O(k) 空间
+            # 对比 append 循环：空间一样，但 extend 底层走 C 内存拷贝，常数更小
+            res.extend(matrix[top][i]        for i in range(left,  right))
+            res.extend(matrix[i][right]       for i in range(top,   bottom))
+            res.extend(matrix[bottom][i]      for i in range(right, left, -1))
+            res.extend(matrix[i][left]        for i in range(bottom, top, -1))
             left += 1
             right -= 1
             top += 1
