@@ -32,8 +32,6 @@ from typing import List
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        if len(prices) <= 1:
-            return 0
         buy, sell, sell_prev = -10**9, 0, 0
         for i in range(len(prices)):
             buy = max(buy, sell_prev - prices[i])
