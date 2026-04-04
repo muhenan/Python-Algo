@@ -50,6 +50,7 @@ Algo and python data structures
 
 ### DFS Backtracking 回溯
 - **39** [Combination Sum · 组合总和](topics/dfs-backtracking/39-combination-sum.py)
+- **46** [Permutations · 全排列](topics/dfs-backtracking/46-permutations.py)
 - **2597** [The Number of Beautiful Subsets](topics/dfs-backtracking/2597-the-number-of-beautiful-subsets.py)
 
 ### DP 动态规划
