@@ -13,6 +13,9 @@ Algo and python data structures
 
 ## Index
 
+### Bit Manipulation 位运算
+- **187** [Repeated DNA Sequences · 重复的DNA序列](topics/bit-manipulation/187-repeated-dna-sequences.py)
+
 ### Array 数组
 - **1** [Two Sum · 两数之和](topics/array/1-two-sum.py)
 - **48** [Rotate Image · 旋转图像](topics/array/48-rotate-image.py)
