@@ -96,6 +96,7 @@ Algo and python data structures
 - **6085** [Maximum Importance of a Road · 道路的最大总重要性](topics/greedy/6085-maximum-importance-of-a-road.py)
 
 ### HashMap 哈希表
+- **49** [Group Anagrams · 字母异位词分组](topics/hashmap/49-group-anagrams.py)
 - **128** [Longest Consecutive Sequence · 最长连续序列](topics/hashmap/128-longest-consecutive-sequence.py)
 - **170** [Two Sum III - Data Structure Design](topics/hashmap/170-two-sum-iii-data-structure-design.py)
 - **448** [Find All Numbers Disappeared in an Array · 找到所有消失的数字](topics/hashmap/448-find-all-numbers-disappeared-in-an-array.py)
@@ -191,6 +192,40 @@ Algo and python data structures
 
 ### Zip
 - [Zip Learn · Python zip函数学习](topics/zip/zip_learn.py)
+
+---
+
+## Python Data Structures Reference
+
+### 内置，无需 import
+| 类型 | 说明 |
+|------|------|
+| `list` | 动态数组 |
+| `dict` | 哈希表 |
+| `set` | 哈希集合，O(1) 查找/插入/删除 |
+| `tuple` | 不可变数组，可做 dict key |
+| `frozenset` | 不可变 set，可做 dict key |
+
+### `collections`
+| 类型 | 说明 |
+|------|------|
+| `defaultdict` | 带默认值的 dict，省去 `get(key, [])` |
+| `Counter` | 计数器，继承自 dict |
+| `deque` | 双端队列，两端 O(1)，BFS 标配 |
+| `OrderedDict` | 有序 dict（3.7+ 普通 dict 已有序） |
+| `namedtuple` | 有字段名的 tuple |
+
+### 其他标准库
+| 模块 | 说明 |
+|------|------|
+| `heapq` | 最小堆，操作普通 list |
+| `bisect` | 有序列表二分查找/插入 |
+
+### `typing` — 仅用于类型注解，不是数据结构
+```python
+from typing import List, Dict, Set, Tuple, Optional, Union
+# Python 3.9+ 可直接用内置类型: list[int], dict[str, int]
+```
 
 ---
 
