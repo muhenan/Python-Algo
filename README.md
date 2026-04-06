@@ -96,6 +96,7 @@ Algo and python data structures
 - **6085** [Maximum Importance of a Road · 道路的最大总重要性](topics/greedy/6085-maximum-importance-of-a-road.py)
 
 ### HashMap 哈希表
+- **128** [Longest Consecutive Sequence · 最长连续序列](topics/hashmap/128-longest-consecutive-sequence.py)
 - **170** [Two Sum III - Data Structure Design](topics/hashmap/170-two-sum-iii-data-structure-design.py)
 - **448** [Find All Numbers Disappeared in an Array · 找到所有消失的数字](topics/hashmap/448-find-all-numbers-disappeared-in-an-array.py)
 - **506** [Relative Ranks · 相对名次](topics/hashmap/506-relative-ranks.py)
