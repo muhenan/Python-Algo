@@ -152,6 +152,7 @@ Algo and python data structures
 - [Segment Tree · 线段树实现](topics/segment-tree/SegmentTree.py)
 
 ### Sliding Window 滑动窗口
+- **3** [Longest Substring Without Repeating Characters · 无重复字符的最长子串](topics/sliding-window/3-longest-substring-without-repeating-characters.py)
 - **76** [Minimum Window Substring · 最小覆盖子串](topics/sliding-window/76-minimum-window-substring.py)
 - **159** [Longest Substring with At Most Two Distinct Characters](topics/sliding-window/159-longest-substring-with-at-most-two-distinct-characters.py)
 - **2765** [Longest Alternating Subarray · 最长交替子数组](topics/sliding-window/2765-longest-alternating-subarray.py)
