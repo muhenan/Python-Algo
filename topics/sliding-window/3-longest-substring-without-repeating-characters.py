@@ -69,9 +69,26 @@ def max_substring2(s):
     return ans
 
 
+def max_substring3(s):
+    """
+    方法三：set 窗口（最好写、最好记）
+    用 set 判断重复，收缩时直接 remove，不需要维护计数。
+    by 阶跃星辰 (StepFun)
+    """
+    char_set = set()
+    left = ans = 0
+    for right in range(len(s)):
+        while s[right] in char_set:
+            char_set.remove(s[left])
+            left += 1
+        char_set.add(s[right])
+        ans = max(ans, right - left + 1)
+    return ans
+
+
 # Tests
 if __name__ == "__main__":
-    for fn in [max_substring, max_substring2]:
+    for fn in [max_substring, max_substring2, max_substring3]:
         assert fn("abcabcbb") == 3
         assert fn("bbbbb") == 1
         assert fn("pwwkew") == 3
