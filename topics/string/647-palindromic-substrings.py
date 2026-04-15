@@ -1,23 +1,16 @@
 class Solution:
     def countSubstrings(self, s: str) -> int:
         ans = 0
-        length = len(s)
-        for i in range(length):
+        for i in range(len(s)):
             step = 0
-            while i - step >= 0 and i + step < length:
-                if s[i - step] == s[i + step]:
-                    ans += 1
-                    step += 1
-                else:
-                    break
-        for i in range(length - 1):
+            while i - step >= 0 and i + step < len(s) and s[i - step] == s[i + step]:
+                ans += 1
+                step += 1
+        for i in range(len(s) - 1):
             step = 0
-            while i - step >= 0 and i + step + 1 < length:
-                if s[i - step] == s[i + step + 1]:
-                    ans += 1
-                    step += 1
-                else:
-                    break
+            while i - step >= 0 and i + step + 1 < len(s) and s[i - step] == s[i + step + 1]:
+                ans += 1
+                step += 1
         return ans
 
     """
