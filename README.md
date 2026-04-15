@@ -52,6 +52,7 @@ Algo and python data structures
 - [Labuladong DFS · DFS框架学习](topics/dfs/labuladong-dfs.py)
 
 ### DFS Backtracking 回溯
+- **22** [Generate Parentheses · 括号生成](topics/dfs-backtracking/22-generate-parentheses.py)
 - **39** [Combination Sum · 组合总和](topics/dfs-backtracking/39-combination-sum.py)
 - **46** [Permutations · 全排列](topics/dfs-backtracking/46-permutations.py)
 - **2597** [The Number of Beautiful Subsets](topics/dfs-backtracking/2597-the-number-of-beautiful-subsets.py)
