@@ -35,24 +35,19 @@ class Solution:
         Space Complexity: O(n)
         """
         count: Dict[int, int] = {}
-        answer = 0
 
-        def dfs(index: int) -> None:
-            nonlocal answer
+        def dfs(index: int) -> int:
             if index == len(nums):
-                answer += 1
-                return
-
-            dfs(index + 1)
-
+                return 1
+            res = dfs(index + 1)
             num = nums[index]
             if count.get(num - k, 0) == 0 and count.get(num + k, 0) == 0:
                 count[num] = count.get(num, 0) + 1
-                dfs(index + 1)
+                res += dfs(index + 1)
                 count[num] -= 1
+            return res
 
-        dfs(0)
-        return answer - 1
+        return dfs(0) - 1 # exclude the empty subset
 
 
 if __name__ == "__main__":

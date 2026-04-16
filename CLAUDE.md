@@ -46,6 +46,18 @@ test/            # Scratch files, company interview practice, I/O test utils
 - **Learning / framework files**: `{topic}-easy.py`, `labuladong-{topic}.py`, `{DataStructure}.py`
 - **Company problems**: `{company}-{problem}.py`
 
+## ACM Competition Style
+
+This repo targets ACM-style competitive programming. When writing or reviewing solutions, prioritize:
+
+- **Conciseness over verbosity** — fewer lines wins. Collapse obvious steps, avoid over-engineering.
+- **Speed of writing** — code must be writable under contest pressure. Prefer idioms that are easy to recall and type quickly.
+- **No unnecessary abstractions** — inline logic rather than extracting helper functions unless reuse is clear.
+- **Standard contest imports at the top** — use a minimal, memorizable import block (see Imports section).
+- **Skip defensive programming** — assume input is valid per problem constraints; no need to guard against edge cases not in the problem statement.
+
+When there are multiple correct approaches, prefer the one a contestant could write fastest from memory.
+
 ## Code Style
 
 ### Solution structure
