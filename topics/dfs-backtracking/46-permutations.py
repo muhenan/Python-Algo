@@ -31,9 +31,24 @@ from typing import List
 
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        visited = [False] * len(nums)
-        ans = []
-        def dfs(current):
+        """
+        Generate permutations with a visited array.
+
+        Example:
+        Input: nums = [1, 2, 3]
+        Output: [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
+
+        Tags:
+        - Backtracking
+        - DFS
+
+        Time Complexity: O(n * n!)
+        Space Complexity: O(n)
+        """
+        visited: List[bool] = [False] * len(nums)
+        ans: List[List[int]] = []
+
+        def dfs(current: List[int]) -> None:
             if len(current) == len(nums):
                 ans.append(list(current))
                 return
@@ -48,9 +63,23 @@ class Solution:
         return ans
 
     def permute2(self, nums: List[int]) -> List[List[int]]:
-        # swap-based: 原地交换，O(1) 额外空间
-        ans = []
-        def dfs(start):
+        """
+        Generate permutations by swapping in place.
+
+        Example:
+        Input: nums = [1, 2, 3]
+        Output: [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
+
+        Tags:
+        - Backtracking
+        - DFS
+
+        Time Complexity: O(n * n!)
+        Space Complexity: O(n) recursion stack, excluding output
+        """
+        ans: List[List[int]] = []
+
+        def dfs(start: int) -> None:
             if start == len(nums):
                 ans.append(nums[:])
                 return

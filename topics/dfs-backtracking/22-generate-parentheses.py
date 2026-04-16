@@ -20,10 +20,28 @@ Tags:
 - Backtracking
 """
 
+from typing import List
+
+
 class Solution:
-    def generateParenthesis(self, n: int) -> list[str]:
-        ans = []
-        def backtrack(left: int, right: int, current: list[str]):
+    def generateParenthesis(self, n: int) -> List[str]:
+        """
+        Generate all valid parentheses strings with backtracking.
+
+        Example:
+        Input: n = 3
+        Output: ["((()))", "(()())", "(())()", "()(())", "()()()"]
+
+        Tags:
+        - String
+        - Backtracking
+
+        Time Complexity: O(Cn * n), where Cn is the nth Catalan number
+        Space Complexity: O(n) recursion depth, excluding output
+        """
+        ans: List[str] = []
+
+        def backtrack(left: int, right: int, current: List[str]) -> None:
             if left == 0 and right == 0:
                 ans.append(''.join(current))
                 return

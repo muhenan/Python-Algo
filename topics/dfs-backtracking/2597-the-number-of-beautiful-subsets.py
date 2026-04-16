@@ -1,36 +1,63 @@
-from typing import List
+from typing import Dict, List
 
 
-class BeautifulSubsetCounter:
+class Solution:
     """
-    LeetCode 2597: Beautiful Subsets
-    
-    Given an array nums and an integer k, find the number of beautiful subsets.
-    A subset is beautiful if it doesn't contain any pair of elements with difference k. (non-empty)
-    
+    LeetCode 2597: The Number of Beautiful Subsets
+
+    Given an integer array nums and an integer k, return the number of
+    non-empty beautiful subsets. A subset is beautiful if it does not contain
+    two integers whose absolute difference equals k.
+
     Example:
-    Input: nums = [2,4,6], k = 2
+    Input: nums = [2, 4, 6], k = 2
     Output: 4
-    Explanation: Beautiful subsets are: [2, 6], [2], [4], [6]
-    
+
     Tags:
     - DFS
     - Backtracking
-    - Set
+    - Hash Map
     """
-    def beautifulSubsetsBacktrack(self, nums: List[int], k: int) -> int:
-        ans = 0
-        cnt = {}
-        def dfs(i):
-            nonlocal ans
-            if i == len(nums):
-                ans += 1
+
+    def beautifulSubsets(self, nums: List[int], k: int) -> int:
+        """
+        Count valid subsets with DFS and a frequency map.
+
+        Example:
+        Input: nums = [2, 4, 6], k = 2
+        Output: 4
+
+        Tags:
+        - DFS
+        - Backtracking
+
+        Time Complexity: O(2^n)
+        Space Complexity: O(n)
+        """
+        count: Dict[int, int] = {}
+        answer = 0
+
+        def dfs(index: int) -> None:
+            nonlocal answer
+            if index == len(nums):
+                answer += 1
                 return
-            dfs(i + 1)
-            if cnt.get(nums[i] - k, 0) == 0 and cnt.get(nums[i] + k, 0) == 0:
-                cnt[nums[i]] = cnt.get(nums[i], 0) + 1
-                dfs(i + 1)
-                cnt[nums[i]] -= 1
+
+            dfs(index + 1)
+
+            num = nums[index]
+            if count.get(num - k, 0) == 0 and count.get(num + k, 0) == 0:
+                count[num] = count.get(num, 0) + 1
+                dfs(index + 1)
+                count[num] -= 1
 
         dfs(0)
-        return ans - 1
+        return answer - 1
+
+
+if __name__ == "__main__":
+    solu = Solution()
+    assert solu.beautifulSubsets([2, 4, 6], 2) == 4
+    assert solu.beautifulSubsets([1], 1) == 1
+    assert solu.beautifulSubsets([10, 4, 5, 7, 2, 1], 3) == 23
+    print("All tests passed!")
