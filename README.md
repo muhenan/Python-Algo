@@ -236,13 +236,14 @@ from typing import List, Dict, Set, Tuple, Optional, Union
 ### Partition
 ```python
 def partition(nums, l, r):      # pivot = nums[r], 升序
-    pivot, i = nums[r], l
+    pivot = nums[r]
+    index = l
     for j in range(l, r):
-        if nums[j] <= pivot:
-            nums[i], nums[j] = nums[j], nums[i]
-            i += 1
-    nums[i], nums[r] = nums[r], nums[i]
-    return i
+        if nums[j] < pivot:
+            nums[index], nums[j] = nums[j], nums[index]
+            index += 1
+    nums[index], nums[r] = nums[r], nums[index]
+    return index
 ```
 
 ### Quick Sort
