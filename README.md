@@ -55,6 +55,8 @@ Algo and python data structures
 - **22** [Generate Parentheses · 括号生成](topics/dfs-backtracking/22-generate-parentheses.py)
 - **39** [Combination Sum · 组合总和](topics/dfs-backtracking/39-combination-sum.py)
 - **46** [Permutations · 全排列](topics/dfs-backtracking/46-permutations.py)
+- **78** [Subsets · 子集](topics/dfs-backtracking/78-subsets.py)
+- **79** [Word Search · 单词搜索](topics/dfs-backtracking/79-word-search.py)
 - **2597** [The Number of Beautiful Subsets](topics/dfs-backtracking/2597-the-number-of-beautiful-subsets.py)
 
 ### DP 动态规划
