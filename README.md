@@ -14,6 +14,22 @@ Algo and python data structures
 ## Index
 
 * [Quick Reference](https://github.com/muhenan/Python-Algo#quick-reference)
+    * [Partition](https://github.com/muhenan/Python-Algo#partition)
+    * [Quick Sort](https://github.com/muhenan/Python-Algo#quick-sort)
+    * [Kth Largest — Quick Select](https://github.com/muhenan/Python-Algo#kth-largest--quick-select)
+    * [BFS](https://github.com/muhenan/Python-Algo#bfs)
+    * [DFS](https://github.com/muhenan/Python-Algo#dfs)
+    * [Backtracking 回溯](https://github.com/muhenan/Python-Algo#backtracking-回溯)
+    * [Binary Search 二分](https://github.com/muhenan/Python-Algo#binary-search-二分)
+    * [Sliding Window 滑动窗口](https://github.com/muhenan/Python-Algo#sliding-window-滑动窗口)
+    * [Union Find 并查集](https://github.com/muhenan/Python-Algo#union-find-并查集)
+    * [Two Pointers 对撞指针](https://github.com/muhenan/Python-Algo#two-pointers-对撞指针)
+    * [Monotonic Stack 单调栈](https://github.com/muhenan/Python-Algo#monotonic-stack-单调栈)
+    * [Prefix Sum 前缀和](https://github.com/muhenan/Python-Algo#prefix-sum-前缀和)
+    * [LIS O(n log n)](https://github.com/muhenan/Python-Algo#lis-on-log-n)
+    * [Heap Top-K](https://github.com/muhenan/Python-Algo#heap-top-k)
+    * [Reverse Linked List 反转链表](https://github.com/muhenan/Python-Algo#reverse-linked-list-反转链表)
+    * [Fast & Slow Pointers 快慢指针](https://github.com/muhenan/Python-Algo#fast--slow-pointers-快慢指针)
 
 ### Bit Manipulation 位运算
 - **187** [Repeated DNA Sequences · 重复的DNA序列](topics/bit-manipulation/187-repeated-dna-sequences.py)
