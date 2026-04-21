@@ -13,7 +13,7 @@ Algo and python data structures
 
 ## Index
 
-* [Quick Reference](https://github.com/muhenan/Python-Algo/blob/main/README.md#quick-reference)
+* [Quick Reference](https://github.com/muhenan/Python-Algo#quick-reference)
 
 ### Bit Manipulation 位运算
 - **187** [Repeated DNA Sequences · 重复的DNA序列](topics/bit-manipulation/187-repeated-dna-sequences.py)
