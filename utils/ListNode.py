@@ -1,5 +1,0 @@
-class ListNode:
-    """链表节点的定义"""
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
