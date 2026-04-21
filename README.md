@@ -13,6 +13,8 @@ Algo and python data structures
 
 ## Index
 
+* [Quick Reference](https://github.com/muhenan/Python-Algo/blob/main/README.md#quick-reference)
+
 ### Bit Manipulation 位运算
 - **187** [Repeated DNA Sequences · 重复的DNA序列](topics/bit-manipulation/187-repeated-dna-sequences.py)
 
@@ -455,6 +457,11 @@ def topK(nums, k):              # 最大的 k 个，小顶堆维护
 
 ### Reverse Linked List 反转链表
 ```python
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 def reverseList(head):
     prev = None
     curr = head
