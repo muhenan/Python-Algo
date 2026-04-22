@@ -77,6 +77,9 @@ Algo and python data structures
 - **79** [Word Search · 单词搜索](topics/dfs-backtracking/79-word-search.py)
 - **2597** [The Number of Beautiful Subsets](topics/dfs-backtracking/2597-the-number-of-beautiful-subsets.py)
 
+### Search Discussion 搜索算法讨论
+- [Search Algorithms Discussion · 搜索算法讨论](topics/search-algorithms-discussion.md)
+
 ### DP 动态规划
 - **10** [Regular Expression Matching · 正则表达式匹配](topics/dp/10-regular-expression-matching.py)
 - **121** [Best Time to Buy and Sell Stock · 买卖股票的最佳时机](topics/dp/121-best-time-to-buy-and-sell-stock.py)
